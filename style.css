@@ -112,14 +112,16 @@ h2:after {
 }
 
 h3 {
-  font: normal normal 2.2em/1em "apolline-sc-1","apolline-sc-2", serif;
+  padding-top: 0.5em;
+  font: normal normal 2.3em/1em "apolline-sc-1","apolline-sc-2", serif;
   margin-bottom: 1em;
   text-transform: lowercase;
   text-align: center;
 }
 
 h4 {
-  font: normal bold 1.6em/1em "apolline-1","apolline-2", serif;
+  padding-top: 0.5em;
+  font: normal bold 1.7em/1em "apolline-1","apolline-2", serif;
   margin-bottom: 1em;
 }
 
@@ -1151,11 +1153,21 @@ body > footer .colophon p:after {
   text-transform: uppercase;
   line-height: 0.8em;
   margin: 0.05em 0.08em 0 0;
+  text-shadow: 0 1px 0 #fff;
 }
 
 .single-post article .post-content > p:first-of-type:first-line,
 #project-description > p:first-of-type:first-line {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content blockquote {
+  font-family: Georgia, serif;
+  text-shadow: none;
 }
 
 
