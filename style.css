@@ -181,9 +181,9 @@ a:hover {
 }
 
 ul, ol {
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
   margin-left: 1.5em;
 }
 ol { list-style: inside decimal; }
@@ -208,12 +208,12 @@ ul li li,
 ol li li { margin-bottom: 0; }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.5em;
   line-height: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.8em;
 }
 
-p + p { margin-top: -0.5em; }
+p + p { margin-top: -0.3em; }
 
 pre { 
   padding: 15px; 
@@ -583,6 +583,7 @@ article .readmore:after {
 .aligncenter {
   clear: both;
   margin: 0 auto;
+  display: block;
 }
 
 .alignright {
@@ -1148,7 +1149,7 @@ body > footer .colophon p:after {
 /* Drop caps */
 .single-post article .post-content > p:first-of-type:first-letter,
 #project-description > p:first-of-type:first-letter {
-  font-size: 5em;
+  font-size: 4.8em;
   float: left;
   text-transform: uppercase;
   line-height: 0.8em;
@@ -1160,6 +1161,7 @@ body > footer .colophon p:after {
 #project-description > p:first-of-type:first-line {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
   text-shadow: 0 1px 0 #fff;
+  font-size: 1.1em;
 }
 
 .post-content p,
