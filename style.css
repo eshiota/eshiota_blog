@@ -1161,7 +1161,6 @@ body > footer .colophon p:after {
 #project-description > p:first-of-type:first-line {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
   text-shadow: 0 1px 0 #fff;
-  font-size: 1.1em;
 }
 
 .post-content p,
