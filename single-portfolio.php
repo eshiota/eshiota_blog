@@ -22,7 +22,7 @@
                 $gallery .= "<li". ($count == 1 ? ' class="active"' : '') ." id='job-image-". $attachment->ID ."'>"
                             . "<a href='" . $img_src_full[0] . "' title='View larger version'>"
                             . "<img src='" . $img_src[0] . "' alt='" . $attachment->post_content . "' />"
-                            . "</a><p class='description'>" . $attachment->post_content . "</p></li>";
+                            . "</a></li>";
                 $count++;
             }
         }
