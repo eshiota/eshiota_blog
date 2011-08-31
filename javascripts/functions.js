@@ -80,12 +80,12 @@ $(document).ready(function() {
         }, speed);
         
         function galleryResize () {
-            var width = $gallery.width(),
-                height,
-                ratio = 0.75;
+            var width = $gallery.width()
+              , height
+              , ratio = 0.625
+            ;
 
             height = width * ratio;
-
             $gallery.css("height", height);
         }
     }
