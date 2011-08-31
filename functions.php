@@ -8,7 +8,7 @@ automatic_feed_links();
 
 add_theme_support('post-thumbnails');
 
-add_image_size('portfolio-thumb', 350, 218, true);
+add_image_size('portfolio-thumb', 384, 240, true);
 add_image_size('portfolio-gallery', 640, 400, true);
     
 add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->category_nicename}.php") ) return TEMPLATEPATH . "/single-{$cat->category_nicename}.php"; } return $t;' ));
