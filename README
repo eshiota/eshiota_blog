@@ -1,0 +1,18 @@
+# eshiota.com WordPress theme
+
+This is the theme I'm using in [my site](http://www.eshiota.com/). While you're free to edit and use the `style.css` file, I strongly recommend using the [Compass gem](http://compass-style.org/) to code and generate the stylesheets.
+
+## Using Compass
+
+### Installing
+
+1. Install Ruby. Tip: do it [using RVM](http://beginrescueend.com/)
+2. Setup the Ruby environment: `gem update --system`
+3. Install Compass gem: `gem install compass`
+
+### Using Compass
+
+* All SCSS files are located in the `sass` folder.
+* The `compass_config.rb` contains the compiling options used in the theme. You are free to change them.
+* To generate the CSS files using the `compass_config.rb` options, type `compass compile -c compass_config.rb` while on the theme's folder.
+* To watch the SCSS files and compile them on every change, type `compass watch -c compass_config.rb`.
