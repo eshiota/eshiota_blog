@@ -1,0 +1,74 @@
+/*******************************************************************************
+*
+*  Components » Portfolio List
+*  
+*  Contains the styles used when listing Portfolio posts.
+*
+*******************************************************************************/
+
+#portfolio-list { @include clearfix; }
+
+#portfolio-list article {
+  @include box-sizing(border-box);
+  float: left;
+  margin-bottom: 3em;
+  width: 30.33%;
+  padding: 0;
+  margin: 0 1.5% 3%;
+}
+
+#portfolio-list h1 {
+  font-size: 3em;
+  padding: 0;
+}
+
+#portfolio-list h1:before,
+#portfolio-list h1:after { display: none; }
+
+#portfolio-list article h1 { display: none; }
+
+#portfolio-list figure {
+  text-align: center;
+  @include box-sizing(border-box);
+  padding: 2%;
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+  position: relative;
+  background: #fff;
+}
+
+#portfolio-list figure:before,
+#portfolio-list figure:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 5%;
+  bottom: 18px;
+  width: 80%;
+  max-width: 300px;
+  height: 55%;
+  @include single-box-shadow(rgba(0, 0, 0, 0.3), 0, 10px, 10px);
+  @include transform(skew(-15deg) rotate(-6deg));
+}
+
+#portfolio-list figure:after {
+  left: auto;
+  right: 5%;
+  @include transform(skew(15deg) rotate(6deg));
+}
+
+#portfolio-list figure a,
+#portfolio-list figure a:visited {
+  display: block;
+  border: none;
+  color: #555;
+}
+
+/* overrides inline junk */
+#portfolio-list img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+#portfolio-list figcaption { display: none; }

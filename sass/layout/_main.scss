@@ -1,0 +1,52 @@
+/*******************************************************************************
+*
+*  Layout » Main
+*  
+*  Contains the base for the layout: grid and main components.
+*
+*******************************************************************************/
+
+/*********************************************************************
+*  =Grid
+*********************************************************************/
+body > header,
+body > section,
+body > article,
+body > footer {
+  margin: 0 auto;
+  width: 85%;
+  /*min-width: 940px;*/
+  padding: 0 30px;
+}
+
+body > section,
+body > article { width: 75%; }
+
+
+/*********************************************************************
+*  =Article/section contents
+*********************************************************************/
+
+article .readmore {
+  color : #6fa0ae;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+article .readmore:before {
+  color: #6fa0ae;
+  content: "\00AB";
+  padding-right: 0.2em;
+}
+
+article .readmore:after {
+  color: #6fa0ae;
+  content: "\00BB";
+  padding-left: 0.2em;
+}
+
+.section-content {
+  width: 75%;
+  margin: 0 auto;
+}

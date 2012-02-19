@@ -1,0 +1,205 @@
+/*******************************************************************************
+*
+*  Core » Typography
+*  
+*  Contains all typographical elements styles. It was
+*  heavily based on Paul Irish's HTML5 Boilerplate.
+*
+*  http://html5boilerplate.com/
+*
+*******************************************************************************/
+
+/* 10px / 16px - 62.5% */
+body {
+  font: normal normal 62.5%/1.4em "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", serif;
+  text-shadow: 0 1px 0 #fff;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+
+abbr {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  text-transform: lowercase;
+}
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+ul, ol {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-bottom: 1.8em;
+  margin-left: 1.5em;
+}
+
+ol { list-style: inside decimal; }
+ul { list-style: inside disc; }
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-left: 1.8em;
+}
+
+ul p,
+ol p { font-size: 1em; }
+
+ul li,
+ol li { margin-bottom: 0.5em; }
+
+ul li li,
+ol li li { margin-bottom: 0; }
+
+p {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+p + p { margin-top: -0.3em; }
+
+pre { 
+  padding: 15px; 
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+blockquote {
+  padding-left: 1.5em;
+  border-left: 3px solid #b55e5e;
+  margin-left: 4.5em;
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 1.5em;
+}
+
+
+/*********************************************************************
+*  =Basic titles
+*********************************************************************/
+
+h1 {
+  font: normal normal 5.6em/1em "adriane-1", "adriane-2", serif;
+  margin-bottom: 0.75em;
+  position: relative;
+  text-align: center;
+  
+  a,
+  a:visited {
+    color: $TEXT-COLOR;
+    border-bottom: none;
+  }
+  
+  a:hover {
+    color: $TEXT-HOVER-COLOR;
+    border-bottom: 1px solid $TEXT-HOVER-COLOR;
+  }
+}
+
+h2 {
+  font: normal normal 3.6em/0.8em "apolline-sc-1","apolline-sc-2", serif;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  text-align: center;
+  
+  &:before {
+    content: "\007e";
+    padding-right: 0.2em;
+  }
+  
+  &:after {
+    content: "\007e";
+    padding-left: 0.2em;
+  }
+}
+
+h3 {
+  padding-top: 0.5em;
+  font: normal normal 2.3em/1em "apolline-sc-1","apolline-sc-2", serif;
+  margin-bottom: 1em;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+h4 {
+  padding-top: 0.5em;
+  font: normal bold 1.7em/1em "adriane-1", "adriane-2", serif;
+  margin-bottom: 1em;
+}
+
+
+/*********************************************************************
+*  =Main title with ornament
+*********************************************************************/
+h1.main-title { padding: 0 83px; }
+
+h1.main-title:before,
+h1.main-title:after {
+  background: image-url('sprite.png') no-repeat;
+  content: '';
+  display: block;
+  width: 76px;
+  height: 50px;
+  margin-top: -23px;
+  position: absolute;
+  top: 50%;
+}
+
+h1.main-title:before { left: 0; }
+h1.main-title:after { right: 0; }
+
+.orn1 h1.main-title:before { background-position: 0 0; }
+.orn1 h1.main-title:after  { background-position: 0 -50px; }
+.orn2 h1.main-title:before { background-position: 0 -100px; }
+.orn2 h1.main-title:after  { background-position: 0 -150px; }
+.orn3 h1.main-title:before { background-position: 0 -200px; }
+.orn3 h1.main-title:after  { background-position: 0 -250px; }
+.orn4 h1.main-title:before { background-position: 0 -300px; }
+.orn4 h1.main-title:after  { background-position: 0 -350px; }
+
+
+/*********************************************************************
+*  =Page titles
+*********************************************************************/
+
+body > section > h1,
+body > section > hgroup > h1,
+body > article > hgroup > h1 {
+  @include box-sizing(border-box);
+  margin: 0 auto 1em;
+  width: 66.66666%;
+}
+
+/*  ==Titles with subtitles
+-------------------------------------------------*/
+body > section > hgroup > h1,
+body > article > hgroup > h1 { margin-bottom: 0; }
+
+body > section > hgroup > h2,
+body > article > hgroup > h2 {
+  padding-top: 0.5em;
+  margin-bottom: 2.5em;
+  font-size: 2em;
+}
+
+body > article > hgroup > h2 {
+  text-transform: lowercase;
+  font-size: 1.8em;
+}

@@ -1,0 +1,148 @@
+/*******************************************************************************
+*
+*  Sections » Home
+*  
+*  Contains the styles used in site's homepage.
+*
+*******************************************************************************/
+
+body.home > section { margin-bottom: 3em; }
+
+body.home > section > header {
+  background: image-url('hr.png') no-repeat center bottom;
+  margin-bottom: 3em;
+  padding-bottom: 5em;
+  text-align: center;
+}
+
+body.home > section > header h1 {
+/*  font-size: 3.85em;*/
+  font-size: 5em;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+body.home > section > header h2 {
+  /*font-size: 11em;*/
+  font-size: 15em;
+  line-height: 0.8em;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "quatro-slab-1", "quatro-slab-2", serif;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  padding-top: 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+body.home > section > header h2:before,
+body.home > section > header h2:after {
+  content: '';
+  padding: 0;
+}
+
+body.home > section > header h2 .amp {
+  font-size: 0.75em;
+  padding-left: 0.1em;
+  margin-bottom: 0.2em;
+}
+
+body.home > section > header h3 {
+  /*font-size: 3.04em;*/
+  font-size: 6em;
+  line-height: 1em;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "quatro-slab-1", "quatro-slab-2", serif;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8em;
+  text-transform: lowercase;
+  width: 100%;
+  padding-top: 0.3em;
+}
+
+body.home > section > header h3:before,
+body.home > section > header h3:after {
+  font-family: "quatro-slab-1", "quatro-slab-2", serif;
+  font-size: 0.8em;
+  position: relative;
+  top: -0.15em;
+}
+
+body.home > section > header h3:before {
+  content: "\223c";
+  padding-right: 0.4em;
+}
+
+body.home > section > header h3:after {
+  content: "\223c";
+  padding-left: 0.4em;
+}
+
+body.home > section > header p { font-size: 1.7em; }
+
+body.home > section > header strong { color: #b55e5e; }
+
+body.home > section > header .more {
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+
+body.home > section > header .more:before {
+  color: #6fa0ae;
+  content: "\00AB";
+  padding-right: 0.2em;
+}
+
+body.home > section > header .more:after {
+  color: #6fa0ae;
+  content: "\00BB";
+  padding-left: 0.2em;
+}
+
+/* While I don't have tutorials or portfolio, this is commented */
+/*body.home section section {
+  @include box-sizing(border-box);
+  float: left;
+  margin-bottom: 0;
+  width: 33.33%;
+}*/
+
+/* While I don't have tutorials or portfolio, this is used */
+body.home section section {
+  @include box-sizing(border-box);
+  margin: 0 auto;
+  width: 66.66666%;
+}
+
+body.home section section article { margin-bottom: 0; }
+
+body.home section section h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+  padding-top: 0;
+  text-transform: lowercase;
+}
+
+.latest-blogpost { padding-right: 1.7em; }
+
+.latest-tutorial { padding: 0 1.7em; }
+
+.featured-project { padding-left: 1.7em; }
+
+body.home section article {
+  margin: 0;
+  width: auto;
+}
+
+body.home article h1 {
+  font-size: 3em;
+  padding: 0;
+}
+
+body.home article h1:before,
+body.home article h1:after {
+  display: none;
+}

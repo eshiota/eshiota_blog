@@ -1,0 +1,262 @@
+/*******************************************************************************
+*
+*  Components » Single Post
+*  
+*  Contains the styles used when a single post is shown.
+*
+*******************************************************************************/
+
+
+/*********************************************************************
+*  =Post Header
+*********************************************************************/
+
+.single-post > article > header {
+  font-size: 1.5em;
+  height: 2.571428em;
+  border-bottom: 1px solid #777;
+  margin-bottom: 4em;
+  line-height: 2.42857em;
+  color: #777;
+  position: relative;
+  @include single-box-shadow(#fff, 0, 1px, 0);
+}
+
+.single-post > article > header nav,
+.single-post > article > header strong {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  text-transform: lowercase;
+}
+
+.single-post > article > header time {
+  margin-bottom: 0;
+  float: left;
+  height: 2.571428em;
+  white-space: nowrap;
+  border-right: 1px solid #777;
+  text-align: center;
+  padding: 0 1em;
+}
+
+.single-post > article > header nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2.571428em;
+  padding-left: 1.5em;
+  border-left: 1px solid #777;
+}
+
+.single-post > article > header nav h2 { display: none; }
+
+.single-post > article > header nav ul {
+  font-size: 1em;
+  line-height: 2.42857em;
+}
+
+.single-post > article > header nav li {
+  padding-right: 1.5em;
+  float: left;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.single-post > article > header nav li.prev {
+  border-right: 1px dotted #aaa;
+  margin-right: 1.5em;
+}
+
+.single-post > article > header nav li.prev a:before,
+.single-post > article > header nav li.prev span:before {
+  content: '\00AB';
+  padding-right: 0.5em;
+}
+
+.single-post > article > header nav li.next a:after,
+.single-post > article > header nav li.next span:after {
+  content: '\00BB';
+  padding-left: 0.5em;
+}
+
+.single-post > article > header nav .disabled { color: #bbb; }
+
+.post-tags {
+  float: left;
+  white-space: nowrap;
+  padding-left: 1em;
+  font-size: 1em;
+  line-height: 2.42857em;
+  margin-bottom: 0;
+  text-transform: lowercase;
+}
+
+.post-tags strong {
+  font-weight: normal;
+  padding-right: 3px;
+  font-size: 1.1em;
+}
+
+
+/*********************************************************************
+*  =Post styles
+*********************************************************************/
+/* Drop caps */
+.single-post article .post-content,
+#project-description,
+.section-content {
+   > p:first-of-type:first-letter {
+     font-size: 4em;
+     float: left;
+     text-transform: uppercase;
+     line-height: 0.8em;
+     margin: 0.05em 0.08em 0 0;
+     text-shadow: 0 1px 0 #fff;
+   }
+   
+   > p:first-of-type:first-line {
+     font-family: "apolline-sc-1","apolline-sc-2", serif;
+     text-shadow: 0 1px 0 #fff;
+     font-size: 1.05em;
+   }
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content blockquote { text-shadow: none; }
+
+
+/*********************************************************************
+*  =Blog post
+*********************************************************************/
+
+.single-post .post .post-content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+/*********************************************************************
+*  =Portfolio post
+*********************************************************************/
+
+#project-gallery {
+  @include box-sizing(border-box);
+  padding: 10px;
+  height: 200px; /* Will be overriden by JavaScript */
+  width: 48.4375%;
+  margin-right: 3.125%;
+  margin-bottom: 3em;
+  float: left;
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+  position: relative;
+  background: #fff;
+}
+
+#project-gallery:before,
+#project-gallery:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 5%;
+  bottom: 18px;
+  width: 80%;
+  max-width: 300px;
+  height: 55%;
+  @include single-box-shadow(rgba(0, 0, 0, 0.3), 0, 10px, 10px);
+  @include transform(skew(-15deg) rotate(-6deg));
+}
+
+#project-gallery:after {
+  left: auto;
+  right: 5%;
+  @include transform(skew(15deg) rotate(6deg));
+}
+
+#project-gallery ul {
+  list-style: none;
+  list-style-position: outside;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#project-gallery img {
+  width: 100%;
+  max-width: 100%;
+  opacity: 0;
+  @include single-transition(opacity, 1s, ease-in);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#project-gallery .active img {
+  opacity: 1;
+  z-index: 100;
+}
+
+#project-gallery p {
+  @include box-sizing(border-box);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  opacity: 0;
+  @include single-transition(opacity, 1s, ease-in);
+  background: rgba(0,0,0,.8);
+  margin-bottom: 0;
+  padding: 0.5em 0.8em;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+  font-style: italic;
+}
+
+#project-gallery .active p { opacity: 1; }
+
+#project-description {
+  float: left;
+  width: 48.4375%;
+}
+
+.single-post article.project aside.social { clear: both; }
+
+
+/*********************************************************************
+*  =Post Social Sharing
+*********************************************************************/
+
+.single-post .social:before {
+  background: url(images/sprite.png) no-repeat -24px -424px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  visibility: visible;
+}
+
+.single-post .social {
+  font: normal normal 1.6em/1.1em "apolline-sc-1","apolline-sc-2", serif;
+  position: relative;
+  padding-top: 4.5em;
+}
+
+.single-post .social strong {
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+.single-post .social strong,
+.single-post .fb,
+.single-post .twitter {
+  float: left;
+  margin-right: 0.8em;
+}

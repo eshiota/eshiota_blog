@@ -1,0 +1,60 @@
+/*******************************************************************************
+*
+*  Layout » Header
+*  
+*  Contains the styles for the site's main header.
+*
+*******************************************************************************/
+
+body > header {
+  background: image-url('hr_header.png') no-repeat center bottom;
+  height: 86px;
+  margin-bottom: 3em;
+  padding: 3.5em 0 5em;
+}
+
+body > header h1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+}
+
+body > header h1 a {
+  background: image-url('logo_eshiota.png') no-repeat;
+  border-bottom: none !important;
+  display: block;
+  height: 86px;
+  text-indent: -9999px;
+  width: 69px;
+}
+
+body > header nav h2 { display: none; }
+
+body > header nav ul {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  font-size: 2.4em;
+  font-style: normal;
+  line-height: 75px;
+}
+
+body > header nav li {
+  text-align: center;
+  width: 20%;
+  margin-bottom: 0;
+}
+
+body > header .about,
+body > header .blog { float: left; }
+
+body > header .tutorials,
+body > header .portfolio { float: right; }
+
+body > header nav a,
+body > header nav a:visited {
+  border-bottom: 1px solid #666;
+  color: #666;
+  text-decoration: none;
+  @include single-transition(all, 0.1s, ease-in);
+}
+
+body > header nav a:hover { border-bottom: 5px solid #b55e5e; }

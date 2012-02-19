@@ -1,6 +1,8 @@
 # eshiota.com WordPress theme
 
-This is the theme I'm using in [my site](http://www.eshiota.com/). While you're free to edit and use the `style.css` file, I strongly recommend using the [Compass gem](http://compass-style.org/) to code and generate the stylesheets.
+This is the theme I'm using in [my site](http://www.eshiota.com/). Feel free to study its implementation and suggest code improvements.
+
+This theme uses the [Compass gem](http://compass-style.org/), and while I strongly dislike the SASS synatx and avoid rules nesting (except on really useful cases), I do enjoy its CSS3 prefix helpers and how SASS' `@include` feature helps organizing the site's styles.
 
 ## Using Compass
 
@@ -16,3 +18,11 @@ This is the theme I'm using in [my site](http://www.eshiota.com/). While you're 
 * The `compass_config.rb` contains the compiling options used in the theme. You are free to change them.
 * To generate the CSS files using the `compass_config.rb` options, type `compass compile -c compass_config.rb` while on the theme's folder.
 * To watch the SCSS files and compile them on every change, type `compass watch -c compass_config.rb`.
+
+## Theme roadmap
+
+* Improve site's background and some textures
+* Implement Category listing
+* Improve the Portfolio listing
+* Improve the Portfolio display
+* Find a better way to get photos

@@ -1,0 +1,76 @@
+/*******************************************************************************
+*
+*  Components » Post List
+*  
+*  Contains the styles used when listing Blog and Tutorial posts.
+*
+*******************************************************************************/
+
+#post-list article {
+  margin: 0 auto 4em;
+  position: relative;
+  padding-bottom: 6em;
+  width: 50%;
+}
+
+#post-list.non-paginated article:last-child {
+  padding-bottom: 0;
+}
+
+#post-list.non-paginated article:last-child:after {
+  display: none;
+}
+
+#post-list article:after {
+  background: image-url('sprite.png') no-repeat -24px -424px;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+}
+
+#post-list article h1 {
+  font-size: 3.2em;
+}
+
+#post-list article h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  padding-top: 0;
+  text-align: center;
+}
+
+#post-list article h2:before {
+  content: "\007e";
+  padding-right: 0.2em;
+}
+
+#post-list article h2:after {
+  content: "\007e";
+  padding-left: 0.2em;
+}
+
+#post-list article .meta {
+  text-align: center;
+  text-transform: lowercase;
+  margin: -1em 0 2.25em;
+}
+
+#post-list article .meta .datetime {
+  padding-right: 0.2em;
+  font-size: 0.875em;
+}
+
+#post-list article .meta .datetime:after {
+  padding-left: 0.4em;
+  content: "\22C5";
+}
+
+#post-list article .meta a {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  font-size: 0.875em;
+}

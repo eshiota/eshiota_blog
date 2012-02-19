@@ -1,0 +1,93 @@
+/*******************************************************************************
+*
+*  Layout » Footer
+*  
+*  Contains the styles for the site's main footer.
+*
+*******************************************************************************/
+
+body > footer {
+  background: image-url('hr.png') no-repeat center top;
+  margin-top: 4em;
+  padding-top: 5em;
+}
+
+body > footer aside {
+  @include box-sizing(border-box);
+  float: left;
+  padding: 0 1.7em;
+  width: 33.33%;
+}
+
+body > footer h4 {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 0.8em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+body > footer h4:before {
+  content: "";
+  background-image: image-url('sprite.png');
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 0.3em;
+  position: relative;
+}
+
+body > footer .info { text-align: center; }
+
+body > footer .info address {
+  font-style: normal;
+  margin-bottom: 3em;
+}
+
+body > footer .info ul {
+  list-style: none;
+  margin: 0;
+}
+
+body > footer .info ul li { margin-bottom: 0; }
+
+body > footer h4.contact:before {
+  background-position: 0 -400px;
+  top: 7px;
+}
+
+body > footer h4.feeds:before {
+  background-position: -24px -400px;
+  top: 4px;
+}
+
+body > footer .flickr h4:before {
+  background-position: -48px -400px;
+  top: 7px;
+}
+
+body > footer .instagram h4:before {
+  background-position: 0 -424px;
+  top: 6px;
+}
+
+body > footer .colophon {
+  clear: both;
+  float: none;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+body > footer .colophon h4 { display: none; }
+
+body > footer .colophon p:before {
+  content: "\007e";
+  padding-right: 0.2em;
+}
+
+body > footer .colophon p:after {
+  content: "\007e";
+  padding-left: 0.2em;
+}

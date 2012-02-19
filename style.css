@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: eshiota typoverload
 Theme URI: http://eshiota.com.br/
@@ -6,29 +7,101 @@ Version: 0.1
 Author: Eduardo Shiota Yasuda
 Tags: fluid, responsive design, clean, white
 */
-/*********************************************************************
+/*******************************************************************************
 *
-*  ==================================================================
-*  CREDITS
-*  ==================================================================
-*
-*  HTML5 Boilerplate - http://html5boilerplate.com/
-*
-*  ==================================================================
-*  TABLE OF CONTENTS
-*  ==================================================================
+*  eshiota.com theme
+*  Eduardo Shiota Yasuda
+*  contato@eshiota.com
 *  
+*  This is the theme I'm using in my WP blog.
+*
+*  This website was heavily based on Paul Irish's
+*  HTML5 Boilerplate, and adapted to my needs. You should definetely
+*  check it out:
+*
+*  http://html5boilerplate.com/
+*
+********************************************************************************/
+/*******************************************************************************
+*  =Bootstrap
+*******************************************************************************/
+/*********************************************************************
+*
+*  Config Module
+*  Eduardo Shiota Yasuda
+*  contato@eshiota.com
+*  
+*  All constants that will be used though the styles must be
+*  defined here.
 *
 *********************************************************************/
 /*********************************************************************
-*  =Reset (taken from HTML5 Boilerplate)
+*
+*  Mixins Module
+*  Eduardo Shiota Yasuda
+*  contato@eshiota.com
+*  
+*  All general purpose mixins are defined here.
+*
 *********************************************************************/
-/* 
-  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
-  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
-  html5doctor.com/html-5-reset-stylesheet/
-*/
-/* line 46, sass/style.scss */
+/*********************************************************************
+*  =Clearfix
+*********************************************************************/
+/*********************************************************************
+*
+*  Helpers Module
+*  Eduardo Shiota Yasuda
+*  contato@eshiota.com
+*  
+*  Non-semantic helper classes used through the site.
+*
+*********************************************************************/
+/* line 11, sass/base/_helpers.scss */
+.hidden {
+  display: none;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* line 14, sass/base/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 25, sass/base/_helpers.scss */
+.group:before, .group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* line 26, sass/base/_helpers.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 27, sass/base/_helpers.scss */
+.group {
+  zoom: 1;
+}
+
+/*******************************************************************************
+*
+*  Core » Reset
+*  
+*  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+*  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+*  html5doctor.com/html-5-reset-stylesheet/
+*
+*******************************************************************************/
+/* line 22, sass/core/_reset.scss */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -50,184 +123,164 @@ time, mark, audio, video {
   background: transparent;
 }
 
-/* line 48, sass/style.scss */
+/* line 24, sass/core/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 51, sass/style.scss */
+/*******************************************************************************
+*
+*  Core » Definitions
+*  
+*  Contains all main base styles and resets. It was
+*  heavily based on Paul Irish's HTML5 Boilerplate.
+*
+*  http://html5boilerplate.com/
+*
+*******************************************************************************/
+/* line 12, sass/core/_basic.scss */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 18, sass/core/_basic.scss */
+body {
+  background: url('images/bg_noise_gray.png?1300110998') repeat;
+}
+
+/* line 21, sass/core/_basic.scss */
+body,
+select {
+  color: #555555;
+}
+
+/* line 23, sass/core/_basic.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 25, sass/core/_basic.scss */
+a, a:active, a:visited {
+  border-bottom: 1px dotted #6fa0ae;
+  color: #6fa0ae;
+  text-decoration: none;
+}
+
+/* line 31, sass/core/_basic.scss */
+a:hover {
+  border-bottom: 1px solid #4b6c75;
+  color: #4b6c75;
+}
+
+/* line 36, sass/core/_basic.scss */
+section, article {
+  margin-bottom: 1.5em;
+}
+
+/* line 38, sass/core/_basic.scss */
+::-moz-selection {
+  background: #b55e5e;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 39, sass/core/_basic.scss */
+::selection {
+  background: #b55e5e;
+  color: white;
+  text-shadow: none;
+}
+
+/* line 41, sass/core/_basic.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/* line 48, sass/core/_basic.scss */
 nav ul,
 nav ol {
   list-style: none;
   margin: 0;
 }
 
-/* line 53, sass/style.scss */
-blockquote, q {
-  quotes: none;
-}
-
-/* line 56, sass/style.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-/* line 58, sass/style.scss */
-abbr {
-  font-family: "apolline-sc-1","apolline-sc-2", serif;
-  text-transform: lowercase;
-}
-
-/* line 63, sass/style.scss */
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-/* line 65, sass/style.scss */
+/* line 50, sass/core/_basic.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 67, sass/style.scss */
+/*******************************************************************************
+*
+*  Core » Forms
+*  
+*  Contains all form styles. It was
+*  heavily based on Paul Irish's HTML5 Boilerplate.
+*
+*  http://html5boilerplate.com/
+*
+*******************************************************************************/
+/* line 12, sass/core/_forms.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 69, sass/style.scss */
+/* line 14, sass/core/_forms.scss */
 select, input, textarea, button {
   font: 99% sans-serif;
 }
 
-/* line 71, sass/style.scss */
-pre, code, kbd, samp {
-  font-family: monospace, sans-serif;
-}
-
-/* line 73, sass/style.scss */
+/* line 16, sass/core/_forms.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 74, sass/style.scss */
+/* line 17, sass/core/_forms.scss */
 input[type="checkbox"] {
   vertical-align: bottom;
 }
 
-/* line 75, sass/style.scss */
+/* line 18, sass/core/_forms.scss */
 .ie7 input[type="checkbox"] {
   vertical-align: baseline;
 }
 
-/* line 76, sass/style.scss */
+/* line 19, sass/core/_forms.scss */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/*********************************************************************
-*  =Default styles (based on HTML5 Boilerplate)
-*********************************************************************/
-/* line 82, sass/style.scss */
-html {
-  overflow-y: scroll;
-}
-
-/* 10px / 16px - 62.5% */
-/* line 85, sass/style.scss */
-body {
-  background: url(images/bg_noise_gray.png) repeat;
-  font: normal normal 62.5%/1.4em "apolline-1", "apolline-2", serif;
-  text-shadow: 0 1px 0 #fff;
-}
-
-/* line 91, sass/style.scss */
-h1 {
-  font: normal normal 5.6em/1em "apolline-1", "apolline-2", serif;
-  margin-bottom: 0.75em;
-  color: #555;
-  position: relative;
-  text-align: center;
-}
-
-/* line 94, sass/style.scss */
-h1 a,
-h1 a:visited {
-  color: #555;
-  border-bottom: none;
-}
-
-/* line 95, sass/style.scss */
-h1 a:hover {
-  color: #999;
-  border-bottom: 1px solid #999;
-}
-
-/* line 97, sass/style.scss */
-h2 {
-  font: normal normal 3.6em/0.8em "apolline-sc-1", "apolline-sc-2", serif;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  text-align: center;
-}
-
-/* line 104, sass/style.scss */
-h2:before {
-  content: "\007e";
-  padding-right: 0.2em;
-}
-
-/* line 109, sass/style.scss */
-h2:after {
-  content: "\007e";
-  padding-left: 0.2em;
-}
-
-/* line 114, sass/style.scss */
-h3 {
-  padding-top: 0.5em;
-  font: normal normal 2.3em/1em "apolline-sc-1", "apolline-sc-2", serif;
-  margin-bottom: 1em;
-  text-transform: lowercase;
-  text-align: center;
-}
-
-/* line 122, sass/style.scss */
-h4 {
-  padding-top: 0.5em;
-  font: normal bold 1.7em/1em "apolline-1", "apolline-2", serif;
-  margin-bottom: 1em;
-}
-
-/* line 129, sass/style.scss */
-body,
-select {
-  color: #555;
-}
-
-/* line 131, sass/style.scss */
+/* line 21, sass/core/_forms.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 136, sass/style.scss */
+/* line 26, sass/core/_forms.scss */
 input[type=text],
 input[type=email],
 input[type=url],
 textarea {
   background: #fff;
-  background: -moz-linear-gradient(top, white, #e8e8e8 2%, white 30%);
-  background: -webkit-gradient(linear, left top, left 12, from(white), color-stop(2%, #e8e8e8), color-stop(30%, white), to(white));
-  background: linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(2%, #e8e8e8), color-stop(30%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
+  background-image: -moz-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
+  background-image: -o-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
+  background-image: -ms-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
+  background-image: linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
   border: 1px solid #999;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
   border-radius: 3px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   color: #444;
   font-size: 1em;
@@ -235,25 +288,72 @@ textarea {
   padding: 0.38em 0.38em;
   width: 100%;
   /* default behavior is extending to full area, overwrite as needed */
-  font-family: "apolline-1","apolline-2", serif;
+  font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", serif;
 }
 
-/* line 157, sass/style.scss */
+/* line 43, sass/core/_forms.scss */
 input:focus,
 textarea:focus {
   -moz-box-shadow: 0 0 5px #0080ff;
   -webkit-box-shadow: 0 0 5px #0080ff;
+  -o-box-shadow: 0 0 5px #0080ff;
   box-shadow: 0 0 5px #0080ff;
 }
 
-/* line 163, sass/style.scss */
+/*******************************************************************************
+*
+*  Core » Typography
+*  
+*  Contains all typographical elements styles. It was
+*  heavily based on Paul Irish's HTML5 Boilerplate.
+*
+*  http://html5boilerplate.com/
+*
+*******************************************************************************/
+/* 10px / 16px - 62.5% */
+/* line 13, sass/core/_typography.scss */
+body {
+  font: normal normal 62.5%/1.4em "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", serif;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* line 18, sass/core/_typography.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 21, sass/core/_typography.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 23, sass/core/_typography.scss */
+abbr {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  text-transform: lowercase;
+}
+
+/* line 28, sass/core/_typography.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 30, sass/core/_typography.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 32, sass/core/_typography.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 164, sass/style.scss */
+/* line 33, sass/core/_typography.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -261,52 +361,34 @@ mark {
   font-weight: bold;
 }
 
-/* line 165, sass/style.scss */
+/* line 34, sass/core/_typography.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 166, sass/style.scss */
+/* line 35, sass/core/_typography.scss */
 small {
   font-size: 85%;
 }
 
-/* line 167, sass/style.scss */
+/* line 36, sass/core/_typography.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 168, sass/style.scss */
+/* line 37, sass/core/_typography.scss */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 169, sass/style.scss */
+/* line 38, sass/core/_typography.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 171, sass/style.scss */
-a:hover, a:active {
-  outline: none;
-}
-
-/* line 173, sass/style.scss */
-a, a:active, a:visited {
-  border-bottom: 1px dotted #6fa0ae;
-  color: #6fa0ae;
-  text-decoration: none;
-}
-
-/* line 178, sass/style.scss */
-a:hover {
-  border-bottom: 1px solid #4b6c75;
-  color: #4b6c75;
-}
-
-/* line 183, sass/style.scss */
+/* line 40, sass/core/_typography.scss */
 ul, ol {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -314,17 +396,17 @@ ul, ol {
   margin-left: 1.5em;
 }
 
-/* line 189, sass/style.scss */
+/* line 47, sass/core/_typography.scss */
 ol {
   list-style: inside decimal;
 }
 
-/* line 190, sass/style.scss */
+/* line 48, sass/core/_typography.scss */
 ul {
   list-style: inside disc;
 }
 
-/* line 195, sass/style.scss */
+/* line 53, sass/core/_typography.scss */
 ul ul,
 ul ol,
 ol ul,
@@ -334,37 +416,37 @@ ol ol {
   margin-left: 1.8em;
 }
 
-/* line 202, sass/style.scss */
+/* line 60, sass/core/_typography.scss */
 ul p,
 ol p {
   font-size: 1em;
 }
 
-/* line 205, sass/style.scss */
+/* line 63, sass/core/_typography.scss */
 ul li,
 ol li {
   margin-bottom: 0.5em;
 }
 
-/* line 208, sass/style.scss */
+/* line 66, sass/core/_typography.scss */
 ul li li,
 ol li li {
   margin-bottom: 0;
 }
 
-/* line 210, sass/style.scss */
+/* line 68, sass/core/_typography.scss */
 p {
-  font-size: 1.5em;
-  line-height: 1.8em;
-  margin-bottom: 1.8em;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
 }
 
-/* line 216, sass/style.scss */
+/* line 74, sass/core/_typography.scss */
 p + p {
   margin-top: -0.3em;
 }
 
-/* line 218, sass/style.scss */
+/* line 76, sass/core/_typography.scss */
 pre {
   padding: 15px;
   white-space: pre;
@@ -377,7 +459,7 @@ pre {
   /* IE */
 }
 
-/* line 226, sass/style.scss */
+/* line 84, sass/core/_typography.scss */
 blockquote {
   padding-left: 1.5em;
   border-left: 3px solid #b55e5e;
@@ -387,57 +469,184 @@ blockquote {
   margin-bottom: 1.5em;
 }
 
-/* line 235, sass/style.scss */
-section, article {
-  margin-bottom: 1.5em;
+/*********************************************************************
+*  =Basic titles
+*********************************************************************/
+/* line 98, sass/core/_typography.scss */
+h1 {
+  font: normal normal 5.6em/1em "adriane-1", "adriane-2", serif;
+  margin-bottom: 0.75em;
+  position: relative;
+  text-align: center;
+}
+/* line 105, sass/core/_typography.scss */
+h1 a,
+h1 a:visited {
+  color: #555555;
+  border-bottom: none;
+}
+/* line 110, sass/core/_typography.scss */
+h1 a:hover {
+  color: #999999;
+  border-bottom: 1px solid #999999;
 }
 
-/* line 237, sass/style.scss */
-::-moz-selection {
-  background: #b55e5e;
-  color: #fff;
-  text-shadow: none;
+/* line 116, sass/core/_typography.scss */
+h2 {
+  font: normal normal 3.6em/0.8em "apolline-sc-1", "apolline-sc-2", serif;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  text-align: center;
+}
+/* line 122, sass/core/_typography.scss */
+h2:before {
+  content: "\007e";
+  padding-right: 0.2em;
+}
+/* line 127, sass/core/_typography.scss */
+h2:after {
+  content: "\007e";
+  padding-left: 0.2em;
 }
 
-/* line 238, sass/style.scss */
-::selection {
-  background: #b55e5e;
-  color: #fff;
-  text-shadow: none;
+/* line 133, sass/core/_typography.scss */
+h3 {
+  padding-top: 0.5em;
+  font: normal normal 2.3em/1em "apolline-sc-1", "apolline-sc-2", serif;
+  margin-bottom: 1em;
+  text-transform: lowercase;
+  text-align: center;
 }
 
-/* line 240, sass/style.scss */
-.ie7 img {
-  -ms-interpolation-mode: bicubic;
+/* line 141, sass/core/_typography.scss */
+h4 {
+  padding-top: 0.5em;
+  font: normal bold 1.7em/1em "adriane-1", "adriane-2", serif;
+  margin-bottom: 1em;
 }
 
 /*********************************************************************
-*  =Helper classes
+*  =Main title with ornament
 *********************************************************************/
-/* line 247, sass/style.scss */
-.group:before, .group:after {
-  content: "\0020";
+/* line 151, sass/core/_typography.scss */
+h1.main-title {
+  padding: 0 83px;
+}
+
+/* line 154, sass/core/_typography.scss */
+h1.main-title:before,
+h1.main-title:after {
+  background: url('images/sprite.png?1308956812') no-repeat;
+  content: '';
   display: block;
-  height: 0;
-  visibility: hidden;
+  width: 76px;
+  height: 50px;
+  margin-top: -23px;
+  position: absolute;
+  top: 50%;
 }
 
-/* line 248, sass/style.scss */
-.group:after {
-  clear: both;
+/* line 165, sass/core/_typography.scss */
+h1.main-title:before {
+  left: 0;
 }
 
-/* line 249, sass/style.scss */
-.group {
-  zoom: 1;
+/* line 166, sass/core/_typography.scss */
+h1.main-title:after {
+  right: 0;
 }
 
+/* line 168, sass/core/_typography.scss */
+.orn1 h1.main-title:before {
+  background-position: 0 0;
+}
+
+/* line 169, sass/core/_typography.scss */
+.orn1 h1.main-title:after {
+  background-position: 0 -50px;
+}
+
+/* line 170, sass/core/_typography.scss */
+.orn2 h1.main-title:before {
+  background-position: 0 -100px;
+}
+
+/* line 171, sass/core/_typography.scss */
+.orn2 h1.main-title:after {
+  background-position: 0 -150px;
+}
+
+/* line 172, sass/core/_typography.scss */
+.orn3 h1.main-title:before {
+  background-position: 0 -200px;
+}
+
+/* line 173, sass/core/_typography.scss */
+.orn3 h1.main-title:after {
+  background-position: 0 -250px;
+}
+
+/* line 174, sass/core/_typography.scss */
+.orn4 h1.main-title:before {
+  background-position: 0 -300px;
+}
+
+/* line 175, sass/core/_typography.scss */
+.orn4 h1.main-title:after {
+  background-position: 0 -350px;
+}
+
+/*********************************************************************
+*  =Page titles
+*********************************************************************/
+/* line 184, sass/core/_typography.scss */
+body > section > h1,
+body > section > hgroup > h1,
+body > article > hgroup > h1 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto 1em;
+  width: 66.66666%;
+}
+
+/*  ==Titles with subtitles
+-------------------------------------------------*/
+/* line 193, sass/core/_typography.scss */
+body > section > hgroup > h1,
+body > article > hgroup > h1 {
+  margin-bottom: 0;
+}
+
+/* line 196, sass/core/_typography.scss */
+body > section > hgroup > h2,
+body > article > hgroup > h2 {
+  padding-top: 0.5em;
+  margin-bottom: 2.5em;
+  font-size: 2em;
+}
+
+/* line 202, sass/core/_typography.scss */
+body > article > hgroup > h2 {
+  text-transform: lowercase;
+  font-size: 1.8em;
+}
+
+/*******************************************************************************
+*
+*  Layout » Main
+*  
+*  Contains the base for the layout: grid and main components.
+*
+*******************************************************************************/
 /*********************************************************************
 *  =Grid
 *********************************************************************/
-/* line 257, sass/style.scss */
+/* line 15, sass/layout/_main.scss */
 body > header,
 body > section,
+body > article,
 body > footer {
   margin: 0 auto;
   width: 85%;
@@ -445,27 +654,68 @@ body > footer {
   padding: 0 30px;
 }
 
+/* line 23, sass/layout/_main.scss */
+body > section,
+body > article {
+  width: 75%;
+}
+
 /*********************************************************************
-*  =Layout
+*  =Article/section contents
 *********************************************************************/
-/* line 268, sass/style.scss */
+/* line 30, sass/layout/_main.scss */
+article .readmore {
+  color: #6fa0ae;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+/* line 37, sass/layout/_main.scss */
+article .readmore:before {
+  color: #6fa0ae;
+  content: "\00AB";
+  padding-right: 0.2em;
+}
+
+/* line 43, sass/layout/_main.scss */
+article .readmore:after {
+  color: #6fa0ae;
+  content: "\00BB";
+  padding-left: 0.2em;
+}
+
+/* line 49, sass/layout/_main.scss */
+.section-content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*******************************************************************************
+*
+*  Layout » Header
+*  
+*  Contains the styles for the site's main header.
+*
+*******************************************************************************/
+/* line 9, sass/layout/_header.scss */
 body > header {
-  background: url(images/hr_header.png) no-repeat center bottom;
+  background: url('images/hr_header.png?1300318101') no-repeat center bottom;
   height: 86px;
   margin-bottom: 3em;
   padding: 3.5em 0 5em;
 }
 
-/* line 275, sass/style.scss */
+/* line 16, sass/layout/_header.scss */
 body > header h1 {
   position: absolute;
   left: 50%;
   margin-left: -35px;
 }
 
-/* line 281, sass/style.scss */
+/* line 22, sass/layout/_header.scss */
 body > header h1 a {
-  background: url(images/logo_eshiota.png) no-repeat;
+  background: url('images/logo_eshiota.png?1300116640') no-repeat;
   border-bottom: none !important;
   display: block;
   height: 86px;
@@ -473,82 +723,315 @@ body > header h1 a {
   width: 69px;
 }
 
-/* line 290, sass/style.scss */
+/* line 31, sass/layout/_header.scss */
 body > header nav h2 {
   display: none;
 }
 
-/* line 292, sass/style.scss */
+/* line 33, sass/layout/_header.scss */
 body > header nav ul {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
-  font-size: 2.2em;
+  font-size: 2.4em;
   font-style: normal;
   line-height: 75px;
 }
 
-/* line 299, sass/style.scss */
+/* line 40, sass/layout/_header.scss */
 body > header nav li {
   text-align: center;
   width: 20%;
   margin-bottom: 0;
 }
 
-/* line 306, sass/style.scss */
+/* line 47, sass/layout/_header.scss */
 body > header .about,
 body > header .blog {
   float: left;
 }
 
-/* line 309, sass/style.scss */
+/* line 50, sass/layout/_header.scss */
 body > header .tutorials,
 body > header .portfolio {
   float: right;
 }
 
-/* line 312, sass/style.scss */
+/* line 53, sass/layout/_header.scss */
 body > header nav a,
 body > header nav a:visited {
   border-bottom: 1px solid #666;
   color: #666;
   text-decoration: none;
-  -moz-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
-  -webkit-transition: all 0.1s ease-in;
-  -ms-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 
-/* line 323, sass/style.scss */
+/* line 60, sass/layout/_header.scss */
 body > header nav a:hover {
   border-bottom: 5px solid #b55e5e;
 }
 
-/*********************************************************************
-*  =Home
-*********************************************************************/
-/* line 329, sass/style.scss */
+/*******************************************************************************
+*
+*  Layout » Footer
+*  
+*  Contains the styles for the site's main footer.
+*
+*******************************************************************************/
+/* line 9, sass/layout/_footer.scss */
+body > footer {
+  background: url('images/hr.png?1300708412') no-repeat center top;
+  margin-top: 4em;
+  padding-top: 5em;
+}
+
+/* line 15, sass/layout/_footer.scss */
+body > footer aside {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 1.7em;
+  width: 33.33%;
+}
+
+/* line 22, sass/layout/_footer.scss */
+body > footer h4 {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 0.8em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+/* line 31, sass/layout/_footer.scss */
+body > footer h4:before {
+  content: "";
+  background-image: url('images/sprite.png?1308956812');
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin-right: 0.3em;
+  position: relative;
+}
+
+/* line 41, sass/layout/_footer.scss */
+body > footer .info {
+  text-align: center;
+}
+
+/* line 43, sass/layout/_footer.scss */
+body > footer .info address {
+  font-style: normal;
+  margin-bottom: 3em;
+}
+
+/* line 48, sass/layout/_footer.scss */
+body > footer .info ul {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 53, sass/layout/_footer.scss */
+body > footer .info ul li {
+  margin-bottom: 0;
+}
+
+/* line 55, sass/layout/_footer.scss */
+body > footer h4.contact:before {
+  background-position: 0 -400px;
+  top: 7px;
+}
+
+/* line 60, sass/layout/_footer.scss */
+body > footer h4.feeds:before {
+  background-position: -24px -400px;
+  top: 4px;
+}
+
+/* line 65, sass/layout/_footer.scss */
+body > footer .flickr h4:before {
+  background-position: -48px -400px;
+  top: 7px;
+}
+
+/* line 70, sass/layout/_footer.scss */
+body > footer .instagram h4:before {
+  background-position: 0 -424px;
+  top: 6px;
+}
+
+/* line 75, sass/layout/_footer.scss */
+body > footer .colophon {
+  clear: both;
+  float: none;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 83, sass/layout/_footer.scss */
+body > footer .colophon h4 {
+  display: none;
+}
+
+/* line 85, sass/layout/_footer.scss */
+body > footer .colophon p:before {
+  content: "\007e";
+  padding-right: 0.2em;
+}
+
+/* line 90, sass/layout/_footer.scss */
+body > footer .colophon p:after {
+  content: "\007e";
+  padding-left: 0.2em;
+}
+
+/*******************************************************************************
+*
+*  Layout » Wordpress Styles
+*  
+*  Contains the styles used in classes generated by Wordpress.
+*
+*******************************************************************************/
+/* line 9, sass/layout/_wpstyles.scss */
+.alignleft {
+  float: left;
+  margin-right: 2em;
+}
+
+/* line 14, sass/layout/_wpstyles.scss */
+.aligncenter {
+  clear: both;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 20, sass/layout/_wpstyles.scss */
+.alignright {
+  float: right;
+  margin-left: 2em;
+}
+
+/* line 25, sass/layout/_wpstyles.scss */
+.wp-caption {
+  text-align: center;
+  margin-bottom: 2.5em;
+  background: #fff;
+  padding: 10px;
+  text-shadow: none;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+}
+
+/* line 36, sass/layout/_wpstyles.scss */
+.wp-caption:before,
+.wp-caption:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 8%;
+  bottom: 15px;
+  width: 60%;
+  max-width: 300px;
+  height: 55%;
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
+}
+
+/* line 49, sass/layout/_wpstyles.scss */
+.wp-caption:after {
+  left: auto;
+  right: 8%;
+  -moz-transform: skew(15deg) rotate(6deg);
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
+}
+
+/* line 56, sass/layout/_wpstyles.scss */
+.wp-caption.alignleft,
+.wp-caption.alignright {
+  width: 40%;
+}
+
+/* line 57, sass/layout/_wpstyles.scss */
+.wp-caption.aligncenter {
+  width: 80%;
+}
+
+/* line 59, sass/layout/_wpstyles.scss */
+.wp-caption a {
+  border-bottom: 0;
+}
+
+/* line 63, sass/layout/_wpstyles.scss */
+.wp-caption img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+/* line 69, sass/layout/_wpstyles.scss */
+.wp-caption figcaption {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+
+/*******************************************************************************
+*
+*  Sections » Home
+*  
+*  Contains the styles used in site's homepage.
+*
+*******************************************************************************/
+/* line 9, sass/layout/_home.scss */
 body.home > section {
   margin-bottom: 3em;
 }
 
-/* line 331, sass/style.scss */
+/* line 11, sass/layout/_home.scss */
 body.home > section > header {
-  background: url(images/hr.png) no-repeat center bottom;
+  background: url('images/hr.png?1300708412') no-repeat center bottom;
   margin-bottom: 3em;
   padding-bottom: 5em;
   text-align: center;
 }
 
-/* line 338, sass/style.scss */
+/* line 18, sass/layout/_home.scss */
 body.home > section > header h1 {
   /*  font-size: 3.85em;*/
   font-size: 5em;
   letter-spacing: 0.01em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   width: 100%;
 }
 
-/* line 346, sass/style.scss */
+/* line 26, sass/layout/_home.scss */
 body.home > section > header h2 {
   /*font-size: 11em;*/
   font-size: 15em;
@@ -563,21 +1046,21 @@ body.home > section > header h2 {
   width: 100%;
 }
 
-/* line 361, sass/style.scss */
+/* line 41, sass/layout/_home.scss */
 body.home > section > header h2:before,
 body.home > section > header h2:after {
   content: '';
   padding: 0;
 }
 
-/* line 366, sass/style.scss */
+/* line 46, sass/layout/_home.scss */
 body.home > section > header h2 .amp {
   font-size: 0.75em;
   padding-left: 0.1em;
   margin-bottom: 0.2em;
 }
 
-/* line 372, sass/style.scss */
+/* line 52, sass/layout/_home.scss */
 body.home > section > header h3 {
   /*font-size: 3.04em;*/
   font-size: 6em;
@@ -589,51 +1072,54 @@ body.home > section > header h3 {
   margin-bottom: 0.8em;
   text-transform: lowercase;
   width: 100%;
+  padding-top: 0.3em;
 }
 
-/* line 386, sass/style.scss */
+/* line 67, sass/layout/_home.scss */
 body.home > section > header h3:before,
 body.home > section > header h3:after {
   font-family: "quatro-slab-1", "quatro-slab-2", serif;
   font-size: 0.8em;
+  position: relative;
+  top: -0.15em;
 }
 
-/* line 391, sass/style.scss */
+/* line 74, sass/layout/_home.scss */
 body.home > section > header h3:before {
   content: "\223c";
   padding-right: 0.4em;
 }
 
-/* line 396, sass/style.scss */
+/* line 79, sass/layout/_home.scss */
 body.home > section > header h3:after {
   content: "\223c";
   padding-left: 0.4em;
 }
 
-/* line 401, sass/style.scss */
+/* line 84, sass/layout/_home.scss */
 body.home > section > header p {
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
-/* line 403, sass/style.scss */
+/* line 86, sass/layout/_home.scss */
 body.home > section > header strong {
   color: #b55e5e;
 }
 
-/* line 405, sass/style.scss */
+/* line 88, sass/layout/_home.scss */
 body.home > section > header .more {
   margin-bottom: 0;
   text-transform: lowercase;
 }
 
-/* line 410, sass/style.scss */
+/* line 93, sass/layout/_home.scss */
 body.home > section > header .more:before {
   color: #6fa0ae;
   content: "\00AB";
   padding-right: 0.2em;
 }
 
-/* line 416, sass/style.scss */
+/* line 99, sass/layout/_home.scss */
 body.home > section > header .more:after {
   color: #6fa0ae;
   content: "\00BB";
@@ -642,29 +1128,28 @@ body.home > section > header .more:after {
 
 /* While I don't have tutorials or portfolio, this is commented */
 /*body.home section section {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   float: left;
   margin-bottom: 0;
   width: 33.33%;
 }*/
 /* While I don't have tutorials or portfolio, this is used */
-/* line 433, sass/style.scss */
+/* line 114, sass/layout/_home.scss */
 body.home section section {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
   width: 66.66666%;
 }
 
-/* line 441, sass/style.scss */
+/* line 120, sass/layout/_home.scss */
 body.home section section article {
   margin-bottom: 0;
 }
 
-/* line 443, sass/style.scss */
+/* line 122, sass/layout/_home.scss */
 body.home section section h2 {
   font-size: 1.6em;
   margin-bottom: 0.5em;
@@ -672,795 +1157,72 @@ body.home section section h2 {
   text-transform: lowercase;
 }
 
-/* line 450, sass/style.scss */
+/* line 129, sass/layout/_home.scss */
 .latest-blogpost {
   padding-right: 1.7em;
 }
 
-/* line 452, sass/style.scss */
+/* line 131, sass/layout/_home.scss */
 .latest-tutorial {
   padding: 0 1.7em;
 }
 
-/* line 454, sass/style.scss */
+/* line 133, sass/layout/_home.scss */
 .featured-project {
   padding-left: 1.7em;
 }
 
-/* line 456, sass/style.scss */
+/* line 135, sass/layout/_home.scss */
 body.home section article {
   margin: 0;
   width: auto;
 }
 
-/* line 461, sass/style.scss */
+/* line 140, sass/layout/_home.scss */
 body.home article h1 {
   font-size: 3em;
   padding: 0;
 }
 
-/* line 467, sass/style.scss */
+/* line 146, sass/layout/_home.scss */
 body.home article h1:before,
 body.home article h1:after {
   display: none;
 }
 
+/*******************************************************************************
+*
+*  Components » Single Post
+*  
+*  Contains the styles used when a single post is shown.
+*
+*******************************************************************************/
 /*********************************************************************
-*  =Main styles
+*  =Post Header
 *********************************************************************/
-/* line 475, sass/style.scss */
-h1.main-title {
-  font-size: 5.6em;
-  line-height: 1em;
-  color: #555;
-  padding: 0 83px;
-  position: relative;
-  text-align: center;
-}
-
-/* line 485, sass/style.scss */
-h1.main-title a,
-h1.main-title a:visited {
-  color: #555;
-  border-bottom: none;
-}
-
-/* line 490, sass/style.scss */
-h1.main-title a:hover {
-  color: #999;
-  border-bottom: 1px solid #999;
-}
-
-/* line 496, sass/style.scss */
-h1.main-title:before,
-h1.main-title:after {
-  background: url(images/sprite.png) no-repeat;
-  content: '';
-  display: block;
-  width: 76px;
-  height: 50px;
-  margin-top: -23px;
-  position: absolute;
-  top: 50%;
-}
-
-/* line 507, sass/style.scss */
-h1.main-title:before {
-  left: 0;
-}
-
-/* line 508, sass/style.scss */
-h1.main-title:after {
-  right: 0;
-}
-
-/* line 509, sass/style.scss */
-.orn1 h1.main-title:before {
-  background-position: 0 0;
-}
-
-/* line 510, sass/style.scss */
-.orn1 h1.main-title:after {
-  background-position: 0 -50px;
-}
-
-/* line 511, sass/style.scss */
-.orn2 h1.main-title:before {
-  background-position: 0 -100px;
-}
-
-/* line 512, sass/style.scss */
-.orn2 h1.main-title:after {
-  background-position: 0 -150px;
-}
-
-/* line 513, sass/style.scss */
-.orn3 h1.main-title:before {
-  background-position: 0 -200px;
-}
-
-/* line 514, sass/style.scss */
-.orn3 h1.main-title:after {
-  background-position: 0 -250px;
-}
-
-/* line 515, sass/style.scss */
-.orn4 h1.main-title:before {
-  background-position: 0 -300px;
-}
-
-/* line 516, sass/style.scss */
-.orn4 h1.main-title:after {
-  background-position: 0 -350px;
-}
-
-/* line 519, sass/style.scss */
-body > section > h1,
-body > section > hgroup > h1 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0 auto 1em;
-  width: 66.66666%;
-}
-
-/* line 528, sass/style.scss */
-body > section > hgroup > h1,
-body > article > hgroup > h1 {
-  margin-bottom: 0;
-}
-
-/* line 533, sass/style.scss */
-body > section > hgroup > h2,
-body > article > hgroup > h2 {
-  padding-top: 0.5em;
-  margin-bottom: 1.5em;
-  font-size: 2em;
-}
-
-/* line 539, sass/style.scss */
-body > article > hgroup > h2 {
-  text-transform: lowercase;
-  padding-top: 1em;
-  margin-bottom: 2em;
-  font-size: 1.8em;
-}
-
-/*********************************************************************
-*  =Article/section content
-*********************************************************************/
-/* line 550, sass/style.scss */
-body > article {
-  margin: 0 auto;
-  width: 53.33333%;
-}
-
-/* line 555, sass/style.scss */
-article .readmore {
-  color: #6fa0ae;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-/* line 562, sass/style.scss */
-article .readmore:before {
-  color: #6fa0ae;
-  content: "\00AB";
-  padding-right: 0.2em;
-}
-
-/* line 568, sass/style.scss */
-article .readmore:after {
-  color: #6fa0ae;
-  content: "\00BB";
-  padding-left: 0.2em;
-}
-
-/*********************************************************************
-*  =WP styles
-*********************************************************************/
-/* line 578, sass/style.scss */
-.alignleft {
-  float: left;
-  margin-right: 2em;
-}
-
-/* line 583, sass/style.scss */
-.aligncenter {
-  clear: both;
-  margin: 0 auto;
-  display: block;
-}
-
-/* line 589, sass/style.scss */
-.alignright {
-  float: right;
-  margin-left: 2em;
-}
-
-/* line 594, sass/style.scss */
-.wp-caption {
-  text-align: center;
-  margin-bottom: 2.5em;
-  background: #fff;
-  padding: 10px;
-  text-shadow: none;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  position: relative;
-}
-
-/* line 607, sass/style.scss */
-.wp-caption:before,
-.wp-caption:after {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  left: 8%;
-  bottom: 15px;
-  width: 60%;
-  max-width: 300px;
-  height: 55%;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -webkit-transform: skew(-15deg) rotate(-6deg);
-  -moz-transform: skew(-15deg) rotate(-6deg);
-  -ms-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
-  transform: skew(-15deg) rotate(-6deg);
-}
-
-/* line 626, sass/style.scss */
-.wp-caption:after {
-  left: auto;
-  right: 8%;
-  -webkit-transform: skew(15deg) rotate(6deg);
-  -moz-transform: skew(15deg) rotate(6deg);
-  -ms-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
-}
-
-/* line 636, sass/style.scss */
-.wp-caption.alignleft,
-.wp-caption.alignright {
-  width: 40%;
-}
-
-/* line 637, sass/style.scss */
-.wp-caption.aligncenter {
-  width: 80%;
-}
-
-/* line 639, sass/style.scss */
-.wp-caption a {
-  border-bottom: 0;
-}
-
-/* line 643, sass/style.scss */
-.wp-caption img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100% !important;
-}
-
-/* line 649, sass/style.scss */
-.wp-caption figcaption {
-  font-size: 1.3em;
-  line-height: 1.5em;
-  margin-bottom: 0;
-  padding-top: 0.5em;
-}
-
-/*********************************************************************
-*  =Post list
-*********************************************************************/
-/* line 660, sass/style.scss */
-#post-list article {
-  margin: 0 auto 4em;
-  position: relative;
-  padding-bottom: 6em;
-  width: 50%;
-}
-
-/* line 667, sass/style.scss */
-#post-list.non-paginated article:last-child {
-  padding-bottom: 0;
-}
-
-/* line 671, sass/style.scss */
-#post-list.non-paginated article:last-child:after {
-  display: none;
-}
-
-/* line 675, sass/style.scss */
-#post-list article:after {
-  background: url(images/sprite.png) no-repeat -24px -424px;
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -12px;
-  width: 24px;
-  height: 24px;
-}
-
-/* line 687, sass/style.scss */
-#post-list article h1 {
-  font-size: 3.2em;
-}
-
-/* line 691, sass/style.scss */
-#post-list article h2 {
-  font-size: 1.8em;
-  margin-bottom: 0.5em;
-  padding-top: 0;
-  text-align: center;
-}
-
-/* line 698, sass/style.scss */
-#post-list article h2:before {
-  content: "\007e";
-  padding-right: 0.2em;
-}
-
-/* line 703, sass/style.scss */
-#post-list article h2:after {
-  content: "\007e";
-  padding-left: 0.2em;
-}
-
-/* line 708, sass/style.scss */
-#post-list article .meta {
-  text-align: center;
-  text-transform: lowercase;
-  margin: -1em 0 2.25em;
-}
-
-/* line 714, sass/style.scss */
-#post-list article .meta .datetime {
-  padding-right: 0.2em;
-  font-size: 0.875em;
-}
-
-/* line 719, sass/style.scss */
-#post-list article .meta .datetime:after {
-  padding-left: 0.4em;
-  content: "\22C5";
-}
-
-/* line 724, sass/style.scss */
-#post-list article .meta a {
-  font-family: "apolline-sc-1","apolline-sc-2", serif;
-  font-size: 0.875em;
-}
-
-/*********************************************************************
-*  =Portfolio list
-*********************************************************************/
-/* line 733, sass/style.scss */
-#portfolio-list:before, #portfolio-list:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
-/* line 734, sass/style.scss */
-#portfolio-list:after {
-  clear: both;
-}
-
-/* line 735, sass/style.scss */
-#portfolio-list {
-  zoom: 1;
-}
-
-/* line 737, sass/style.scss */
-#portfolio-list article {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  margin-bottom: 3em;
-  width: 33.33%;
-  padding: 0 1.7em;
-}
-
-/* line 747, sass/style.scss */
-#portfolio-list h2 {
-  font-size: 1.6em;
-  margin-bottom: 0.5em;
-  padding-top: 0;
-  text-transform: lowercase;
-}
-
-/* line 754, sass/style.scss */
-#portfolio-list h1 {
-  font-size: 3em;
-  padding: 0;
-}
-
-/* line 760, sass/style.scss */
-#portfolio-list h1:before,
-#portfolio-list h1:after {
-  display: none;
-}
-
-/* line 762, sass/style.scss */
-#portfolio-list figure {
-  text-align: center;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 2%;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  position: relative;
-  background: #fff;
-}
-
-/* line 776, sass/style.scss */
-#portfolio-list figure:before,
-#portfolio-list figure:after {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  left: 5%;
-  bottom: 18px;
-  width: 80%;
-  max-width: 300px;
-  height: 55%;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -webkit-transform: skew(-15deg) rotate(-6deg);
-  -moz-transform: skew(-15deg) rotate(-6deg);
-  -ms-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
-  transform: skew(-15deg) rotate(-6deg);
-}
-
-/* line 795, sass/style.scss */
-#portfolio-list figure:after {
-  left: auto;
-  right: 5%;
-  -webkit-transform: skew(15deg) rotate(6deg);
-  -moz-transform: skew(15deg) rotate(6deg);
-  -ms-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
-  transform: skew(15deg) rotate(6deg);
-}
-
-/* line 806, sass/style.scss */
-#portfolio-list figure a,
-#portfolio-list figure a:visited {
-  display: block;
-  border: none;
-  color: #555;
-}
-
-/* overrides inline junk */
-/* line 813, sass/style.scss */
-#portfolio-list img {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  display: block;
-}
-
-/* line 820, sass/style.scss */
-#portfolio-list figcaption {
-  font-size: 1.4em;
-  line-height: 1.5em;
-  padding-top: 0.5em;
-}
-
-/*********************************************************************
-*  =Footer
-*********************************************************************/
-/* line 830, sass/style.scss */
-body > footer {
-  background: url(images/hr.png) no-repeat center top;
-  margin-top: 4em;
-  padding-top: 5em;
-}
-
-/* line 836, sass/style.scss */
-body > footer aside {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  padding: 0 1.7em;
-  width: 33.33%;
-}
-
-/* line 845, sass/style.scss */
-body > footer h4 {
-  font-family: "apolline-sc-1","apolline-sc-2", serif;
-  font-size: 2em;
-  font-weight: normal;
-  margin-bottom: 0.8em;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-/* line 854, sass/style.scss */
-body > footer h4:before {
-  content: "";
-  background-image: url(images/sprite.png);
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-  margin-right: 0.3em;
-  position: relative;
-}
-
-/* line 864, sass/style.scss */
-body > footer .info {
-  text-align: center;
-}
-
-/* line 866, sass/style.scss */
-body > footer .info address {
-  font-style: normal;
-  margin-bottom: 3em;
-}
-
-/* line 871, sass/style.scss */
-body > footer .info ul {
-  list-style: none;
-  margin: 0;
-}
-
-/* line 876, sass/style.scss */
-body > footer .info ul li {
-  margin-bottom: 0;
-}
-
-/* line 878, sass/style.scss */
-body > footer h4.contact:before {
-  background-position: 0 -400px;
-  top: 7px;
-}
-
-/* line 883, sass/style.scss */
-body > footer h4.feeds:before {
-  background-position: -24px -400px;
-  top: 4px;
-}
-
-/* line 888, sass/style.scss */
-body > footer .flickr h4:before {
-  background-position: -48px -400px;
-  top: 7px;
-}
-
-/* line 893, sass/style.scss */
-body > footer .instagram h4:before {
-  background-position: 0 -424px;
-  top: 6px;
-}
-
-/* line 898, sass/style.scss */
-body > footer .colophon {
-  clear: both;
-  float: none;
-  font-style: italic;
-  text-align: center;
-  width: 100%;
-}
-
-/* line 906, sass/style.scss */
-body > footer .colophon h4 {
-  display: none;
-}
-
-/* line 908, sass/style.scss */
-body > footer .colophon p:before {
-  content: "\007e";
-  padding-right: 0.2em;
-}
-
-/* line 913, sass/style.scss */
-body > footer .colophon p:after {
-  content: "\007e";
-  padding-left: 0.2em;
-}
-
-/*********************************************************************
-*  =Photo list
-*********************************************************************/
-/* line 922, sass/style.scss */
-.photo-list ul {
-  zoom: 1;
-}
-
-/* line 924, sass/style.scss */
-.photo-list ul:before, .photo-list ul:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
-/* line 925, sass/style.scss */
-.photo-list ul:after {
-  clear: both;
-}
-
-/* line 927, sass/style.scss */
-.photo-list ul {
-  line-height: 0;
-  list-style: none;
-  margin-left: 0;
-  text-align: center;
-}
-
-/* line 934, sass/style.scss */
-.photo-list li {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  padding: 0.4em 0.5em;
-  width: 33.33%;
-}
-
-/* line 943, sass/style.scss */
-.photo-list li a {
-  background: #ececec;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-  border: 5px solid #ececec;
-  display: block;
-  position: relative;
-  width: 100%;
-  -moz-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
-  -webkit-transition: all 0.1s ease-in;
-  -ms-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-/* line 962, sass/style.scss */
-.photo-list li img {
-  width: 100%;
-}
-
-/* line 965, sass/style.scss */
-.photo-list li a:before,
-.photo-list li a:after {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  left: 3px;
-  bottom: 4px;
-  width: 52%;
-  max-width: 70px;
-  height: 55%;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -webkit-transform: skew(-15deg) rotate(-6deg);
-  -moz-transform: skew(-15deg) rotate(-6deg);
-  -ms-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
-  transform: skew(-15deg) rotate(-6deg);
-}
-
-/* line 984, sass/style.scss */
-.photo-list li a:after {
-  left: auto;
-  right: 3px;
-  -webkit-transform: skew(15deg) rotate(6deg);
-  -moz-transform: skew(15deg) rotate(6deg);
-  -ms-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
-  transform: skew(15deg) rotate(6deg);
-}
-
-/* line 994, sass/style.scss */
-.photo-list li:hover a {
-  border-color: #fff;
-}
-
-/*********************************************************************
-*  =Pagination
-*********************************************************************/
-/* line 1002, sass/style.scss */
-.wp-pagenavi {
-  font-size: 1.4em;
-  text-align: center;
-  text-transform: lowercase;
-}
-
-/* line 1008, sass/style.scss */
-.wp-pagenavi .pages {
-  margin-right: 0.5em;
-}
-
-/* line 1012, sass/style.scss */
-.wp-pagenavi .pages:after {
-  content: '\2013';
-  margin-left: 0.8em;
-}
-
-/* line 1018, sass/style.scss */
-.wp-pagenavi a,
-.wp-pagenavi .current {
-  background: rgba(100, 100, 100, 0.05);
-  border: 1px solid #666;
-  -webkit-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-  -moz-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-  box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  margin: 0 0.4em;
-  padding: 0.4em;
-}
-
-/* line 1031, sass/style.scss */
-.wp-pagenavi .current {
-  background: rgba(100, 100, 100, 0.5);
-  color: #fff;
-  text-shadow: 0 -1px 0 #333333, 0 1px 0 #9c9c9c;
-}
-
-/* line 1037, sass/style.scss */
-.wp-pagenavi a:hover {
-  background: rgba(100, 100, 100, 0.2);
-  color: #6fa0ae;
-}
-
-/* line 1043, sass/style.scss */
-.wp-pagenavi .first,
-.wp-pagenavi .last {
-  padding: 0.4em 0.8em;
-}
-
-/* line 1047, sass/style.scss */
-.wp-pagenavi .extend {
-  margin: 0 0.4em;
-}
-
-/*********************************************************************
-*  =Single post
-*********************************************************************/
-/*  ==Post Header
--------------------------------------------------*/
-/* line 1059, sass/style.scss */
+/* line 14, sass/components/_postSingle.scss */
 .single-post > article > header {
-  font-size: 1.4em;
+  font-size: 1.5em;
   height: 2.571428em;
   border-bottom: 1px solid #777;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   line-height: 2.42857em;
   color: #777;
   position: relative;
-  -webkit-box-shadow: 0 1px 0 #fff;
-  -moz-box-shadow: 0 1px 0 #fff;
-  box-shadow: 0 1px 0 #fff;
+  -moz-box-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0 white;
+  -o-box-shadow: 0 1px 0 white;
+  box-shadow: 0 1px 0 white;
 }
 
-/* line 1073, sass/style.scss */
+/* line 26, sass/components/_postSingle.scss */
 .single-post > article > header nav,
 .single-post > article > header strong {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
   text-transform: lowercase;
 }
 
-/* line 1078, sass/style.scss */
+/* line 31, sass/components/_postSingle.scss */
 .single-post > article > header time {
   margin-bottom: 0;
   float: left;
@@ -1471,7 +1233,7 @@ body > footer .colophon p:after {
   padding: 0 1em;
 }
 
-/* line 1088, sass/style.scss */
+/* line 41, sass/components/_postSingle.scss */
 .single-post > article > header nav {
   position: absolute;
   top: 0;
@@ -1481,18 +1243,18 @@ body > footer .colophon p:after {
   border-left: 1px solid #777;
 }
 
-/* line 1097, sass/style.scss */
+/* line 50, sass/components/_postSingle.scss */
 .single-post > article > header nav h2 {
   display: none;
 }
 
-/* line 1099, sass/style.scss */
+/* line 52, sass/components/_postSingle.scss */
 .single-post > article > header nav ul {
   font-size: 1em;
   line-height: 2.42857em;
 }
 
-/* line 1104, sass/style.scss */
+/* line 57, sass/components/_postSingle.scss */
 .single-post > article > header nav li {
   padding-right: 1.5em;
   float: left;
@@ -1500,32 +1262,32 @@ body > footer .colophon p:after {
   margin-bottom: 0;
 }
 
-/* line 1111, sass/style.scss */
+/* line 64, sass/components/_postSingle.scss */
 .single-post > article > header nav li.prev {
   border-right: 1px dotted #aaa;
   margin-right: 1.5em;
 }
 
-/* line 1117, sass/style.scss */
+/* line 70, sass/components/_postSingle.scss */
 .single-post > article > header nav li.prev a:before,
 .single-post > article > header nav li.prev span:before {
   content: '\00AB';
   padding-right: 0.5em;
 }
 
-/* line 1123, sass/style.scss */
+/* line 76, sass/components/_postSingle.scss */
 .single-post > article > header nav li.next a:after,
 .single-post > article > header nav li.next span:after {
   content: '\00BB';
   padding-left: 0.5em;
 }
 
-/* line 1128, sass/style.scss */
+/* line 81, sass/components/_postSingle.scss */
 .single-post > article > header nav .disabled {
   color: #bbb;
 }
 
-/* line 1130, sass/style.scss */
+/* line 83, sass/components/_postSingle.scss */
 .post-tags {
   float: left;
   white-space: nowrap;
@@ -1536,19 +1298,21 @@ body > footer .colophon p:after {
   text-transform: lowercase;
 }
 
-/* line 1140, sass/style.scss */
+/* line 93, sass/components/_postSingle.scss */
 .post-tags strong {
   font-weight: normal;
   padding-right: 3px;
   font-size: 1.1em;
 }
 
-/*  ==Post - Overall
--------------------------------------------------*/
+/*********************************************************************
+*  =Post styles
+*********************************************************************/
 /* Drop caps */
-/* line 1151, sass/style.scss */
+/* line 107, sass/components/_postSingle.scss */
 .single-post article .post-content > p:first-of-type:first-letter,
-#project-description > p:first-of-type:first-letter {
+#project-description > p:first-of-type:first-letter,
+.section-content > p:first-of-type:first-letter {
   font-size: 4em;
   float: left;
   text-transform: uppercase;
@@ -1556,48 +1320,40 @@ body > footer .colophon p:after {
   margin: 0.05em 0.08em 0 0;
   text-shadow: 0 1px 0 #fff;
 }
-
-/* line 1161, sass/style.scss */
+/* line 116, sass/components/_postSingle.scss */
 .single-post article .post-content > p:first-of-type:first-line,
-#project-description > p:first-of-type:first-line {
+#project-description > p:first-of-type:first-line,
+.section-content > p:first-of-type:first-line {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
   text-shadow: 0 1px 0 #fff;
   font-size: 1.05em;
 }
 
-/* line 1170, sass/style.scss */
+/* line 126, sass/components/_postSingle.scss */
 .post-content p,
 .post-content ul,
 .post-content ol,
 .post-content blockquote {
-  font-family: Georgia, serif;
   text-shadow: none;
 }
 
-/*  ==Post - Blog
--------------------------------------------------*/
-/* line 1179, sass/style.scss */
-.single-post .post {
-  width: 80%;
-}
-
-/* line 1183, sass/style.scss */
+/*********************************************************************
+*  =Blog post
+*********************************************************************/
+/* line 133, sass/components/_postSingle.scss */
 .single-post .post .post-content {
-  width: 66.66666%;
+  width: 75%;
   margin: 0 auto;
 }
 
-/*  ==Post - Portfolio project
--------------------------------------------------*/
-/* line 1192, sass/style.scss */
-.single-post article.project {
-  width: 80%;
-}
-
-/* line 1196, sass/style.scss */
+/*********************************************************************
+*  =Portfolio post
+*********************************************************************/
+/* line 143, sass/components/_postSingle.scss */
 #project-gallery {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
   height: 200px;
@@ -1606,14 +1362,15 @@ body > footer .colophon p:after {
   margin-right: 3.125%;
   margin-bottom: 3em;
   float: left;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   position: relative;
   background: #fff;
 }
 
-/* line 1214, sass/style.scss */
+/* line 157, sass/components/_postSingle.scss */
 #project-gallery:before,
 #project-gallery:after {
   content: '';
@@ -1624,28 +1381,29 @@ body > footer .colophon p:after {
   width: 80%;
   max-width: 300px;
   height: 55%;
-  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -webkit-transform: skew(-15deg) rotate(-6deg);
   -moz-transform: skew(-15deg) rotate(-6deg);
-  -ms-transform: skew(-15deg) rotate(-6deg);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
   -o-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
   transform: skew(-15deg) rotate(-6deg);
 }
 
-/* line 1233, sass/style.scss */
+/* line 170, sass/components/_postSingle.scss */
 #project-gallery:after {
   left: auto;
   right: 5%;
-  -webkit-transform: skew(15deg) rotate(6deg);
   -moz-transform: skew(15deg) rotate(6deg);
-  -ms-transform: skew(15deg) rotate(6deg);
+  -webkit-transform: skew(15deg) rotate(6deg);
   -o-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
   transform: skew(15deg) rotate(6deg);
 }
 
-/* line 1243, sass/style.scss */
+/* line 176, sass/components/_postSingle.scss */
 #project-gallery ul {
   list-style: none;
   list-style-position: outside;
@@ -1656,43 +1414,58 @@ body > footer .colophon p:after {
   overflow: hidden;
 }
 
-/* line 1253, sass/style.scss */
+/* line 186, sass/components/_postSingle.scss */
 #project-gallery img {
   width: 100%;
   max-width: 100%;
   opacity: 0;
-  -moz-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  -webkit-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 99;
 }
 
-/* line 1268, sass/style.scss */
+/* line 197, sass/components/_postSingle.scss */
 #project-gallery .active img {
   opacity: 1;
   z-index: 100;
 }
 
-/* line 1273, sass/style.scss */
+/* line 202, sass/components/_postSingle.scss */
 #project-gallery p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 101;
   opacity: 0;
-  -moz-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  -webkit-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
   background: rgba(0, 0, 0, 0.8);
   margin-bottom: 0;
   padding: 0.5em 0.8em;
@@ -1702,25 +1475,26 @@ body > footer .colophon p:after {
   font-style: italic;
 }
 
-/* line 1296, sass/style.scss */
+/* line 219, sass/components/_postSingle.scss */
 #project-gallery .active p {
   opacity: 1;
 }
 
-/* line 1300, sass/style.scss */
+/* line 221, sass/components/_postSingle.scss */
 #project-description {
   float: left;
   width: 48.4375%;
 }
 
-/* line 1305, sass/style.scss */
+/* line 226, sass/components/_postSingle.scss */
 .single-post article.project aside.social {
   clear: both;
 }
 
-/*  ==Social Sharing
--------------------------------------------------*/
-/* line 1313, sass/style.scss */
+/*********************************************************************
+*  =Post Social Sharing
+*********************************************************************/
+/* line 233, sass/components/_postSingle.scss */
 .single-post .social:before {
   background: url(images/sprite.png) no-repeat -24px -424px;
   content: '';
@@ -1734,20 +1508,20 @@ body > footer .colophon p:after {
   visibility: visible;
 }
 
-/* line 1326, sass/style.scss */
+/* line 246, sass/components/_postSingle.scss */
 .single-post .social {
   font: normal normal 1.6em/1.1em "apolline-sc-1", "apolline-sc-2", serif;
   position: relative;
   padding-top: 4.5em;
 }
 
-/* line 1332, sass/style.scss */
+/* line 252, sass/components/_postSingle.scss */
 .single-post .social strong {
   text-transform: lowercase;
   font-weight: normal;
 }
 
-/* line 1339, sass/style.scss */
+/* line 259, sass/components/_postSingle.scss */
 .single-post .social strong,
 .single-post .fb,
 .single-post .twitter {
@@ -1755,28 +1529,242 @@ body > footer .colophon p:after {
   margin-right: 0.8em;
 }
 
-/*********************************************************************
-*  =Comments
-*********************************************************************/
-/* line 1348, sass/style.scss */
+/*******************************************************************************
+*
+*  Components » Post List
+*  
+*  Contains the styles used when listing Blog and Tutorial posts.
+*
+*******************************************************************************/
+/* line 9, sass/components/_postList.scss */
+#post-list article {
+  margin: 0 auto 4em;
+  position: relative;
+  padding-bottom: 6em;
+  width: 50%;
+}
+
+/* line 16, sass/components/_postList.scss */
+#post-list.non-paginated article:last-child {
+  padding-bottom: 0;
+}
+
+/* line 20, sass/components/_postList.scss */
+#post-list.non-paginated article:last-child:after {
+  display: none;
+}
+
+/* line 24, sass/components/_postList.scss */
+#post-list article:after {
+  background: url('images/sprite.png?1308956812') no-repeat -24px -424px;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 36, sass/components/_postList.scss */
+#post-list article h1 {
+  font-size: 3.2em;
+}
+
+/* line 40, sass/components/_postList.scss */
+#post-list article h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  padding-top: 0;
+  text-align: center;
+}
+
+/* line 47, sass/components/_postList.scss */
+#post-list article h2:before {
+  content: "\007e";
+  padding-right: 0.2em;
+}
+
+/* line 52, sass/components/_postList.scss */
+#post-list article h2:after {
+  content: "\007e";
+  padding-left: 0.2em;
+}
+
+/* line 57, sass/components/_postList.scss */
+#post-list article .meta {
+  text-align: center;
+  text-transform: lowercase;
+  margin: -1em 0 2.25em;
+}
+
+/* line 63, sass/components/_postList.scss */
+#post-list article .meta .datetime {
+  padding-right: 0.2em;
+  font-size: 0.875em;
+}
+
+/* line 68, sass/components/_postList.scss */
+#post-list article .meta .datetime:after {
+  padding-left: 0.4em;
+  content: "\22C5";
+}
+
+/* line 73, sass/components/_postList.scss */
+#post-list article .meta a {
+  font-family: "apolline-sc-1","apolline-sc-2", serif;
+  font-size: 0.875em;
+}
+
+/*******************************************************************************
+*
+*  Components » Portfolio List
+*  
+*  Contains the styles used when listing Portfolio posts.
+*
+*******************************************************************************/
+/* line 9, sass/components/_portfolioList.scss */
+#portfolio-list {
+  zoom: 1;
+}
+/* line 16, sass/base/_mixins.scss */
+#portfolio-list:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/* line 11, sass/components/_portfolioList.scss */
+#portfolio-list article {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 3em;
+  width: 30.33%;
+  padding: 0;
+  margin: 0 1.5% 3%;
+}
+
+/* line 20, sass/components/_portfolioList.scss */
+#portfolio-list h1 {
+  font-size: 3em;
+  padding: 0;
+}
+
+/* line 26, sass/components/_portfolioList.scss */
+#portfolio-list h1:before,
+#portfolio-list h1:after {
+  display: none;
+}
+
+/* line 28, sass/components/_portfolioList.scss */
+#portfolio-list article h1 {
+  display: none;
+}
+
+/* line 30, sass/components/_portfolioList.scss */
+#portfolio-list figure {
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2%;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+  background: #fff;
+}
+
+/* line 40, sass/components/_portfolioList.scss */
+#portfolio-list figure:before,
+#portfolio-list figure:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 5%;
+  bottom: 18px;
+  width: 80%;
+  max-width: 300px;
+  height: 55%;
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
+}
+
+/* line 53, sass/components/_portfolioList.scss */
+#portfolio-list figure:after {
+  left: auto;
+  right: 5%;
+  -moz-transform: skew(15deg) rotate(6deg);
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
+}
+
+/* line 60, sass/components/_portfolioList.scss */
+#portfolio-list figure a,
+#portfolio-list figure a:visited {
+  display: block;
+  border: none;
+  color: #555;
+}
+
+/* overrides inline junk */
+/* line 67, sass/components/_portfolioList.scss */
+#portfolio-list img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* line 74, sass/components/_portfolioList.scss */
+#portfolio-list figcaption {
+  display: none;
+}
+
+/*******************************************************************************
+*
+*  Components » Comments
+*  
+*  Contains the styles used on comments lists and form.
+*
+*******************************************************************************/
+/* line 9, sass/components/_comments.scss */
 .post-comments {
   margin: 4em auto 0;
   background: url(images/hr.png) no-repeat center top;
   padding-top: 6em;
 }
 
-/* line 1354, sass/style.scss */
+/* line 15, sass/components/_comments.scss */
 .post-comments h2 {
   padding-top: 0;
 }
 
-/* line 1358, sass/style.scss */
+/* line 19, sass/components/_comments.scss */
 .post-comments-content {
   width: 66.66666%;
   margin: 0 auto;
 }
 
-/* line 1363, sass/style.scss */
+/* line 24, sass/components/_comments.scss */
 .post-comments .empty {
   text-align: center;
   position: relative;
@@ -1784,30 +1772,33 @@ body > footer .colophon p:after {
   margin-bottom: 1.5em;
 }
 
-/* line 1370, sass/style.scss */
+/* line 31, sass/components/_comments.scss */
 #respond {
   width: 75%;
   margin: 0 auto;
 }
 
-/* line 1375, sass/style.scss */
+/*********************************************************************
+*  =Form
+*********************************************************************/
+/* line 41, sass/components/_comments.scss */
 .post-comments label {
   font-family: "apolline-sc-1","apolline-sc-2", serif;
   text-transform: lowercase;
   display: block;
 }
 
-/* line 1381, sass/style.scss */
+/* line 47, sass/components/_comments.scss */
 .post-comments textarea {
   height: 6.36em;
 }
 
-/* line 1385, sass/style.scss */
+/* line 51, sass/components/_comments.scss */
 .post-comments .submit {
   text-align: center;
 }
 
-/* line 1389, sass/style.scss */
+/* line 55, sass/components/_comments.scss */
 .post-comments .submit-bt {
   width: 182px;
   height: 46px;
@@ -1822,14 +1813,17 @@ body > footer .colophon p:after {
   text-shadow: 0 -1px 0 black;
 }
 
-/* line 1403, sass/style.scss */
+/* line 69, sass/components/_comments.scss */
 .post-comments .submit-bt:active {
   position: relative;
   top: 1px;
   left: 1px;
 }
 
-/* line 1409, sass/style.scss */
+/*********************************************************************
+*  =Comment List
+*********************************************************************/
+/* line 80, sass/components/_comments.scss */
 #commentlist {
   list-style: none;
   list-style-position: outside;
@@ -1839,7 +1833,7 @@ body > footer .colophon p:after {
   margin-bottom: 1.5em;
 }
 
-/* line 1419, sass/style.scss */
+/* line 90, sass/components/_comments.scss */
 .post-comments .empty:after,
 #commentlist:after {
   background: url(images/sprite.png) no-repeat -24px -424px;
@@ -1853,64 +1847,65 @@ body > footer .colophon p:after {
   height: 24px;
 }
 
-/* line 1431, sass/style.scss */
+/* line 102, sass/components/_comments.scss */
 #commentlist li {
   margin-bottom: 2em;
 }
 
-/* line 1433, sass/style.scss */
+/* line 104, sass/components/_comments.scss */
 #commentlist article {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   margin-bottom: 0;
   background: #fff;
   padding: 0.75em;
 }
 
-/* line 1442, sass/style.scss */
+/* line 111, sass/components/_comments.scss */
 #commentlist footer {
   margin-bottom: 1em;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.75em;
 }
 
-/* line 1448, sass/style.scss */
+/* line 117, sass/components/_comments.scss */
 #commentlist footer figure {
   float: left;
   margin-right: 0.5em;
   line-height: 1px;
 }
 
-/* line 1454, sass/style.scss */
+/* line 123, sass/components/_comments.scss */
 #commentlist footer figure a {
   border: none;
 }
 
-/* line 1458, sass/style.scss */
+/* line 127, sass/components/_comments.scss */
 #commentlist footer .meta {
   float: left;
   margin: 0;
 }
 
-/* line 1463, sass/style.scss */
-#commentlist footer date {
+/* line 132, sass/components/_comments.scss */
+#commentlist footer time {
   font-size: 0.875em;
 }
 
-/* line 1467, sass/style.scss */
+/* line 136, sass/components/_comments.scss */
 #commentlist footer .reply {
   float: right;
   margin: 0;
   font-size: 0.875em;
 }
 
-/* line 1473, sass/style.scss */
+/* line 142, sass/components/_comments.scss */
 #commentlist article p:last-child {
   margin-bottom: 0;
 }
 
-/* line 1477, sass/style.scss */
+/* line 146, sass/components/_comments.scss */
 #commentlist ol {
   list-style: none;
   list-style-position: outside;
@@ -1918,23 +1913,207 @@ body > footer .colophon p:after {
   margin-left: 4em;
 }
 
-/* line 1484, sass/style.scss */
+/* line 153, sass/components/_comments.scss */
 #commentlist ol li {
   margin-bottom: 1em;
 }
 
-/* line 1488, sass/style.scss */
+/* line 157, sass/components/_comments.scss */
 #commentlist .comment-moderation {
   text-align: center;
   margin-bottom: 0;
 }
 
-/* line 1493, sass/style.scss */
+/* line 162, sass/components/_comments.scss */
 #commentlist .bypostauthor > article {
   background: #e0ecf0;
 }
 
-/* line 1497, sass/style.scss */
+/* line 166, sass/components/_comments.scss */
 #commentlist .bypostauthor > article footer {
   border-bottom: 1px solid #dadada;
+}
+
+/*******************************************************************************
+*
+*  Components » Photo List
+*  
+*  Contains the styles used on photo lists (Instagram and Flickr).
+*
+*******************************************************************************/
+/* line 9, sass/components/_photoList.scss */
+.photo-list ul {
+  zoom: 1;
+}
+
+/* line 11, sass/components/_photoList.scss */
+.photo-list ul:before, .photo-list ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* line 12, sass/components/_photoList.scss */
+.photo-list ul:after {
+  clear: both;
+}
+
+/* line 14, sass/components/_photoList.scss */
+.photo-list ul {
+  line-height: 0;
+  list-style: none;
+  margin-left: 0;
+  text-align: center;
+}
+
+/* line 21, sass/components/_photoList.scss */
+.photo-list li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 0.4em 0.5em;
+  width: 33.33%;
+}
+
+/* line 28, sass/components/_photoList.scss */
+.photo-list li a {
+  background: #ececec;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  border: 5px solid #ececec;
+  display: block;
+  position: relative;
+  width: 100%;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 39, sass/components/_photoList.scss */
+.photo-list li img {
+  width: 100%;
+}
+
+/* line 42, sass/components/_photoList.scss */
+.photo-list li a:before,
+.photo-list li a:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 3px;
+  bottom: 4px;
+  width: 52%;
+  max-width: 70px;
+  height: 55%;
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
+}
+
+/* line 55, sass/components/_photoList.scss */
+.photo-list li a:after {
+  left: auto;
+  right: 3px;
+  -moz-transform: skew(15deg) rotate(6deg);
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
+}
+
+/* line 61, sass/components/_photoList.scss */
+.photo-list li:hover a {
+  border-color: #fff;
+}
+
+/*******************************************************************************
+*
+*  Components » Pagination
+*  
+*  Paginantion used in every listing.
+*
+*******************************************************************************/
+/* line 9, sass/components/_pagination.scss */
+.wp-pagenavi {
+  font-size: 1.4em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+/* line 15, sass/components/_pagination.scss */
+.wp-pagenavi .pages {
+  margin-right: 0.5em;
+}
+
+/* line 19, sass/components/_pagination.scss */
+.wp-pagenavi .pages:after {
+  content: '\2013';
+  margin-left: 0.8em;
+}
+
+/* line 25, sass/components/_pagination.scss */
+.wp-pagenavi a,
+.wp-pagenavi .current {
+  background: rgba(100, 100, 100, 0.05);
+  border: 1px solid #666;
+  -moz-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+  -webkit-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+  -o-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0.4em;
+  padding: 0.4em;
+}
+
+/* line 34, sass/components/_pagination.scss */
+.wp-pagenavi .current {
+  background: rgba(100, 100, 100, 0.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 #333333, 0 1px 0 #9c9c9c;
+}
+
+/* line 40, sass/components/_pagination.scss */
+.wp-pagenavi a:hover {
+  background: rgba(100, 100, 100, 0.2);
+  color: #6fa0ae;
+}
+
+/* line 46, sass/components/_pagination.scss */
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+  padding: 0.4em 0.8em;
+}
+
+/* line 50, sass/components/_pagination.scss */
+.wp-pagenavi .extend {
+  margin: 0 0.4em;
 }

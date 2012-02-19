@@ -1,0 +1,50 @@
+/*******************************************************************************
+*
+*  Core » Definitions
+*  
+*  Contains all main base styles and resets. It was
+*  heavily based on Paul Irish's HTML5 Boilerplate.
+*
+*  http://html5boilerplate.com/
+*
+*******************************************************************************/
+
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body { background: image-url('bg_noise_gray.png') repeat; }
+
+body,
+select { color: $TEXT-COLOR; }
+
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited {
+  border-bottom: 1px dotted #6fa0ae;
+  color: $LINK-COLOR;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #4b6c75;
+  color: $LINK-HOVER-COLOR;
+}
+
+section, article { margin-bottom: 1.5em; }
+
+::-moz-selection { background: $SELECTION-BACKGROUND; color: $SELECTION-COLOR; text-shadow: none; }
+::selection { background:$SELECTION-BACKGROUND; color: $SELECTION-COLOR; text-shadow: none; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+nav ul,
+nav ol { list-style: none; margin: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }

@@ -1,0 +1,63 @@
+/*******************************************************************************
+*
+*  Components » Photo List
+*  
+*  Contains the styles used on photo lists (Instagram and Flickr).
+*
+*******************************************************************************/
+
+.photo-list ul { zoom: 1; }
+
+.photo-list ul:before, .photo-list ul:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.photo-list ul:after { clear: both; }
+
+.photo-list ul {
+  line-height: 0;
+  list-style: none;
+  margin-left: 0;
+  text-align: center;
+}
+
+.photo-list li {
+  @include box-sizing(border-box);
+  float: left;
+  padding: 0.4em 0.5em;
+  width: 33.33%;
+}
+
+.photo-list li a {
+  background: #ececec;
+  @include box-sizing(border-box);
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+  border: 5px solid #ececec;
+  display: block;
+  position: relative;
+  width: 100%;
+  @include single-transition(all, 0.1s, ease-in);
+}
+
+.photo-list li img { width: 100%; }
+
+.photo-list li a:before,
+.photo-list li a:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 3px;
+  bottom: 4px;
+  width: 52%;
+  max-width: 70px;
+  height: 55%;
+  @include single-box-shadow(rgba(0, 0, 0, 0.3), 0, 10px, 10px);
+  @include transform(skew(-15deg) rotate(-6deg));
+}
+
+.photo-list li a:after {
+  left: auto;
+  right: 3px;
+  @include transform(skew(15deg) rotate(6deg));
+}
+
+.photo-list li:hover a {
+  border-color: #fff;
+}

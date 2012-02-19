@@ -1,0 +1,52 @@
+/*******************************************************************************
+*
+*  Components » Pagination
+*  
+*  Paginantion used in every listing.
+*
+*******************************************************************************/
+
+.wp-pagenavi {
+  font-size: 1.4em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.wp-pagenavi .pages {
+  margin-right: 0.5em;
+}
+
+.wp-pagenavi .pages:after {
+  content: '\2013';
+  margin-left: 0.8em;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi .current {
+  background: rgba(100,100,100,0.05);
+  border: 1px solid #666;
+  @include box-shadow(0 1px 0 #fff, 0 1px 1px rgba(0, 0, 0, 0.15) inset);
+  @include border-radius(3px);
+  margin: 0 0.4em;
+  padding: 0.4em;
+}
+
+.wp-pagenavi .current {
+  background: rgba(100,100,100,0.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 #333, 0 1px 0 #9c9c9c;
+}
+
+.wp-pagenavi a:hover {
+  background: rgba(100,100,100,0.2);
+  color: #6fa0ae;
+}
+
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+  padding: 0.4em 0.8em;
+}
+
+.wp-pagenavi .extend {
+  margin: 0 0.4em;
+}

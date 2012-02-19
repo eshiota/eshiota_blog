@@ -8,7 +8,7 @@ automatic_feed_links();
 
 add_theme_support('post-thumbnails');
 
-add_image_size('portfolio-thumb', 384, 240, true);
+add_image_size('portfolio-thumb', 384, 288, true);
 add_image_size('portfolio-gallery', 640, 400, true);
     
 add_filter('single_template', create_function('$t', 'foreach( (array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-{$cat->category_nicename}.php") ) return TEMPLATEPATH . "/single-{$cat->category_nicename}.php"; } return $t;' ));
@@ -120,7 +120,7 @@ function eshiota_comment ($comment, $args, $depth) {
         
         <p class="meta">
           <?php comment_author_link() ?><br />
-          <date datetime="<?php comment_date('c') ?>"><?php comment_date('d.m.y @ H:i') ?></date>
+          <time datetime="<?php comment_date('c') ?>"><?php comment_date('d.m.y @ H:i') ?></time>
         </p>
         
         <p class="reply">
