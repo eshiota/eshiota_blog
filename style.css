@@ -164,51 +164,56 @@ a:hover, a:active {
 
 /* line 25, sass/core/_basic.scss */
 a, a:active, a:visited {
-  border-bottom: 1px dotted #6fa0ae;
   color: #6fa0ae;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-/* line 31, sass/core/_basic.scss */
+/* line 30, sass/core/_basic.scss */
 a:hover {
-  border-bottom: 1px solid #4b6c75;
   color: #4b6c75;
 }
 
-/* line 36, sass/core/_basic.scss */
+/* line 34, sass/core/_basic.scss */
+a:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+/* line 40, sass/core/_basic.scss */
 section, article {
   margin-bottom: 1.5em;
 }
 
-/* line 38, sass/core/_basic.scss */
+/* line 42, sass/core/_basic.scss */
 ::-moz-selection {
   background: #b55e5e;
   color: white;
   text-shadow: none;
 }
 
-/* line 39, sass/core/_basic.scss */
+/* line 43, sass/core/_basic.scss */
 ::selection {
   background: #b55e5e;
   color: white;
   text-shadow: none;
 }
 
-/* line 41, sass/core/_basic.scss */
+/* line 45, sass/core/_basic.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
 }
 
-/* line 48, sass/core/_basic.scss */
+/* line 52, sass/core/_basic.scss */
 nav ul,
 nav ol {
   list-style: none;
   margin: 0;
 }
 
-/* line 50, sass/core/_basic.scss */
+/* line 54, sass/core/_basic.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -474,7 +479,7 @@ blockquote {
 *********************************************************************/
 /* line 98, sass/core/_typography.scss */
 h1 {
-  font: normal normal 5.6em/1em "adriane-1", "adriane-2", serif;
+  font: normal normal 5.6em/1.2em "adriane-1", "adriane-2", serif;
   margin-bottom: 0.75em;
   position: relative;
   text-align: center;
@@ -483,33 +488,32 @@ h1 {
 h1 a,
 h1 a:visited {
   color: #555555;
-  border-bottom: none;
+  text-decoration: none;
 }
 /* line 110, sass/core/_typography.scss */
 h1 a:hover {
-  color: #999999;
-  border-bottom: 1px solid #999999;
+  text-decoration: underline;
 }
 
-/* line 116, sass/core/_typography.scss */
+/* line 115, sass/core/_typography.scss */
 h2 {
   font: normal normal 3.6em/0.8em "apolline-sc-1", "apolline-sc-2", serif;
   margin-bottom: 1em;
   padding-top: 0.5em;
   text-align: center;
 }
-/* line 122, sass/core/_typography.scss */
+/* line 121, sass/core/_typography.scss */
 h2:before {
   content: "\007e";
   padding-right: 0.2em;
 }
-/* line 127, sass/core/_typography.scss */
+/* line 126, sass/core/_typography.scss */
 h2:after {
   content: "\007e";
   padding-left: 0.2em;
 }
 
-/* line 133, sass/core/_typography.scss */
+/* line 132, sass/core/_typography.scss */
 h3 {
   padding-top: 0.5em;
   font: normal normal 2.3em/1em "apolline-sc-1", "apolline-sc-2", serif;
@@ -518,7 +522,7 @@ h3 {
   text-align: center;
 }
 
-/* line 141, sass/core/_typography.scss */
+/* line 140, sass/core/_typography.scss */
 h4 {
   padding-top: 0.5em;
   font: normal bold 1.7em/1em "adriane-1", "adriane-2", serif;
@@ -528,12 +532,12 @@ h4 {
 /*********************************************************************
 *  =Main title with ornament
 *********************************************************************/
-/* line 151, sass/core/_typography.scss */
+/* line 150, sass/core/_typography.scss */
 h1.main-title {
   padding: 0 83px;
 }
 
-/* line 154, sass/core/_typography.scss */
+/* line 153, sass/core/_typography.scss */
 h1.main-title:before,
 h1.main-title:after {
   background: url('images/sprite.png?1308956812') no-repeat;
@@ -546,52 +550,52 @@ h1.main-title:after {
   top: 50%;
 }
 
-/* line 165, sass/core/_typography.scss */
+/* line 164, sass/core/_typography.scss */
 h1.main-title:before {
   left: 0;
 }
 
-/* line 166, sass/core/_typography.scss */
+/* line 165, sass/core/_typography.scss */
 h1.main-title:after {
   right: 0;
 }
 
-/* line 168, sass/core/_typography.scss */
+/* line 167, sass/core/_typography.scss */
 .orn1 h1.main-title:before {
   background-position: 0 0;
 }
 
-/* line 169, sass/core/_typography.scss */
+/* line 168, sass/core/_typography.scss */
 .orn1 h1.main-title:after {
   background-position: 0 -50px;
 }
 
-/* line 170, sass/core/_typography.scss */
+/* line 169, sass/core/_typography.scss */
 .orn2 h1.main-title:before {
   background-position: 0 -100px;
 }
 
-/* line 171, sass/core/_typography.scss */
+/* line 170, sass/core/_typography.scss */
 .orn2 h1.main-title:after {
   background-position: 0 -150px;
 }
 
-/* line 172, sass/core/_typography.scss */
+/* line 171, sass/core/_typography.scss */
 .orn3 h1.main-title:before {
   background-position: 0 -200px;
 }
 
-/* line 173, sass/core/_typography.scss */
+/* line 172, sass/core/_typography.scss */
 .orn3 h1.main-title:after {
   background-position: 0 -250px;
 }
 
-/* line 174, sass/core/_typography.scss */
+/* line 173, sass/core/_typography.scss */
 .orn4 h1.main-title:before {
   background-position: 0 -300px;
 }
 
-/* line 175, sass/core/_typography.scss */
+/* line 174, sass/core/_typography.scss */
 .orn4 h1.main-title:after {
   background-position: 0 -350px;
 }
@@ -599,7 +603,7 @@ h1.main-title:after {
 /*********************************************************************
 *  =Page titles
 *********************************************************************/
-/* line 184, sass/core/_typography.scss */
+/* line 183, sass/core/_typography.scss */
 body > section > h1,
 body > section > hgroup > h1,
 body > article > hgroup > h1 {
@@ -613,13 +617,13 @@ body > article > hgroup > h1 {
 
 /*  ==Titles with subtitles
 -------------------------------------------------*/
-/* line 193, sass/core/_typography.scss */
+/* line 192, sass/core/_typography.scss */
 body > section > hgroup > h1,
 body > article > hgroup > h1 {
   margin-bottom: 0;
 }
 
-/* line 196, sass/core/_typography.scss */
+/* line 195, sass/core/_typography.scss */
 body > section > hgroup > h2,
 body > article > hgroup > h2 {
   padding-top: 0.5em;
@@ -627,7 +631,7 @@ body > article > hgroup > h2 {
   font-size: 2em;
 }
 
-/* line 202, sass/core/_typography.scss */
+/* line 201, sass/core/_typography.scss */
 body > article > hgroup > h2 {
   text-transform: lowercase;
   font-size: 1.8em;
@@ -755,9 +759,10 @@ body > header .portfolio {
   float: right;
 }
 
-/* line 53, sass/layout/_header.scss */
+/* line 54, sass/layout/_header.scss */
 body > header nav a,
-body > header nav a:visited {
+body > header nav a:visited,
+body > header nav a:active {
   border-bottom: 1px solid #666;
   color: #666;
   text-decoration: none;
@@ -775,7 +780,7 @@ body > header nav a:visited {
   transition-timing-function: ease-in;
 }
 
-/* line 60, sass/layout/_header.scss */
+/* line 61, sass/layout/_header.scss */
 body > header nav a:hover {
   border-bottom: 5px solid #b55e5e;
 }
@@ -1288,6 +1293,16 @@ body.home article h1:after {
 }
 
 /* line 83, sass/components/_postSingle.scss */
+.single-post > article > header nav a {
+  text-decoration: none;
+  border-bottom: 1px dotted #6fa0ae;
+}
+/* line 87, sass/components/_postSingle.scss */
+.single-post > article > header nav a:hover {
+  border-bottom: 1px dotted #4b6c75;
+}
+
+/* line 92, sass/components/_postSingle.scss */
 .post-tags {
   float: left;
   white-space: nowrap;
@@ -1298,7 +1313,7 @@ body.home article h1:after {
   text-transform: lowercase;
 }
 
-/* line 93, sass/components/_postSingle.scss */
+/* line 102, sass/components/_postSingle.scss */
 .post-tags strong {
   font-weight: normal;
   padding-right: 3px;
@@ -1309,7 +1324,7 @@ body.home article h1:after {
 *  =Post styles
 *********************************************************************/
 /* Drop caps */
-/* line 107, sass/components/_postSingle.scss */
+/* line 116, sass/components/_postSingle.scss */
 .single-post article .post-content > p:first-of-type:first-letter,
 #project-description > p:first-of-type:first-letter,
 .section-content > p:first-of-type:first-letter {
@@ -1320,7 +1335,7 @@ body.home article h1:after {
   margin: 0.05em 0.08em 0 0;
   text-shadow: 0 1px 0 #fff;
 }
-/* line 116, sass/components/_postSingle.scss */
+/* line 125, sass/components/_postSingle.scss */
 .single-post article .post-content > p:first-of-type:first-line,
 #project-description > p:first-of-type:first-line,
 .section-content > p:first-of-type:first-line {
@@ -1329,7 +1344,7 @@ body.home article h1:after {
   font-size: 1.05em;
 }
 
-/* line 126, sass/components/_postSingle.scss */
+/* line 135, sass/components/_postSingle.scss */
 .post-content p,
 .post-content ul,
 .post-content ol,
@@ -1340,7 +1355,7 @@ body.home article h1:after {
 /*********************************************************************
 *  =Blog post
 *********************************************************************/
-/* line 133, sass/components/_postSingle.scss */
+/* line 142, sass/components/_postSingle.scss */
 .single-post .post .post-content {
   width: 75%;
   margin: 0 auto;
@@ -1349,7 +1364,7 @@ body.home article h1:after {
 /*********************************************************************
 *  =Portfolio post
 *********************************************************************/
-/* line 143, sass/components/_postSingle.scss */
+/* line 152, sass/components/_postSingle.scss */
 #project-gallery {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1370,7 +1385,7 @@ body.home article h1:after {
   background: #fff;
 }
 
-/* line 157, sass/components/_postSingle.scss */
+/* line 166, sass/components/_postSingle.scss */
 #project-gallery:before,
 #project-gallery:after {
   content: '';
@@ -1392,7 +1407,7 @@ body.home article h1:after {
   transform: skew(-15deg) rotate(-6deg);
 }
 
-/* line 170, sass/components/_postSingle.scss */
+/* line 179, sass/components/_postSingle.scss */
 #project-gallery:after {
   left: auto;
   right: 5%;
@@ -1403,7 +1418,7 @@ body.home article h1:after {
   transform: skew(15deg) rotate(6deg);
 }
 
-/* line 176, sass/components/_postSingle.scss */
+/* line 185, sass/components/_postSingle.scss */
 #project-gallery ul {
   list-style: none;
   list-style-position: outside;
@@ -1414,7 +1429,7 @@ body.home article h1:after {
   overflow: hidden;
 }
 
-/* line 186, sass/components/_postSingle.scss */
+/* line 195, sass/components/_postSingle.scss */
 #project-gallery img {
   width: 100%;
   max-width: 100%;
@@ -1437,13 +1452,13 @@ body.home article h1:after {
   z-index: 99;
 }
 
-/* line 197, sass/components/_postSingle.scss */
+/* line 206, sass/components/_postSingle.scss */
 #project-gallery .active img {
   opacity: 1;
   z-index: 100;
 }
 
-/* line 202, sass/components/_postSingle.scss */
+/* line 211, sass/components/_postSingle.scss */
 #project-gallery p {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1475,18 +1490,18 @@ body.home article h1:after {
   font-style: italic;
 }
 
-/* line 219, sass/components/_postSingle.scss */
+/* line 228, sass/components/_postSingle.scss */
 #project-gallery .active p {
   opacity: 1;
 }
 
-/* line 221, sass/components/_postSingle.scss */
+/* line 230, sass/components/_postSingle.scss */
 #project-description {
   float: left;
   width: 48.4375%;
 }
 
-/* line 226, sass/components/_postSingle.scss */
+/* line 235, sass/components/_postSingle.scss */
 .single-post article.project aside.social {
   clear: both;
 }
@@ -1494,7 +1509,7 @@ body.home article h1:after {
 /*********************************************************************
 *  =Post Social Sharing
 *********************************************************************/
-/* line 233, sass/components/_postSingle.scss */
+/* line 242, sass/components/_postSingle.scss */
 .single-post .social:before {
   background: url(images/sprite.png) no-repeat -24px -424px;
   content: '';
@@ -1508,20 +1523,20 @@ body.home article h1:after {
   visibility: visible;
 }
 
-/* line 246, sass/components/_postSingle.scss */
+/* line 255, sass/components/_postSingle.scss */
 .single-post .social {
   font: normal normal 1.6em/1.1em "apolline-sc-1", "apolline-sc-2", serif;
   position: relative;
   padding-top: 4.5em;
 }
 
-/* line 252, sass/components/_postSingle.scss */
+/* line 261, sass/components/_postSingle.scss */
 .single-post .social strong {
   text-transform: lowercase;
   font-weight: normal;
 }
 
-/* line 259, sass/components/_postSingle.scss */
+/* line 268, sass/components/_postSingle.scss */
 .single-post .social strong,
 .single-post .fb,
 .single-post .twitter {

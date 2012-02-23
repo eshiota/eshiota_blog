@@ -80,6 +80,15 @@
 
 .single-post > article > header nav .disabled { color: #bbb; }
 
+.single-post > article > header nav a {
+  text-decoration: none;
+  border-bottom: 1px dotted $LINK-COLOR;
+  
+  &:hover {
+    border-bottom: 1px dotted $LINK-HOVER-COLOR;
+  }
+}
+
 .post-tags {
   float: left;
   white-space: nowrap;

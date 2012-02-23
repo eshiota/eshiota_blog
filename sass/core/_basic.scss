@@ -23,14 +23,18 @@ select { color: $TEXT-COLOR; }
 a:hover, a:active { outline: none; }
 
 a, a:active, a:visited {
-  border-bottom: 1px dotted #6fa0ae;
   color: $LINK-COLOR;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  border-bottom: 1px solid #4b6c75;
   color: $LINK-HOVER-COLOR;
+}
+
+a:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
 }
 
 section, article { margin-bottom: 1.5em; }

@@ -96,7 +96,7 @@ blockquote {
 *********************************************************************/
 
 h1 {
-  font: normal normal 5.6em/1em "adriane-1", "adriane-2", serif;
+  font: normal normal 5.6em/1.2em "adriane-1", "adriane-2", serif;
   margin-bottom: 0.75em;
   position: relative;
   text-align: center;
@@ -104,12 +104,11 @@ h1 {
   a,
   a:visited {
     color: $TEXT-COLOR;
-    border-bottom: none;
+    text-decoration: none;
   }
   
   a:hover {
-    color: $TEXT-HOVER-COLOR;
-    border-bottom: 1px solid $TEXT-HOVER-COLOR;
+    text-decoration: underline;
   }
 }
 

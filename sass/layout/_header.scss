@@ -50,7 +50,8 @@ body > header .tutorials,
 body > header .portfolio { float: right; }
 
 body > header nav a,
-body > header nav a:visited {
+body > header nav a:visited,
+body > header nav a:active {
   border-bottom: 1px solid #666;
   color: #666;
   text-decoration: none;
