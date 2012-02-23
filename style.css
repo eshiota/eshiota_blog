@@ -148,7 +148,7 @@ html {
 
 /* line 18, sass/core/_basic.scss */
 body {
-  background: url('images/bg_noise_gray.png?1300110998') repeat;
+  background: url('images/stucco.png?1330026784') repeat;
 }
 
 /* line 21, sass/core/_basic.scss */
@@ -270,13 +270,10 @@ input[type=email],
 input[type=url],
 textarea {
   background: #fff;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(2%, #e8e8e8), color-stop(30%, #ffffff));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
-  background-image: -moz-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
-  background-image: -o-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
-  background-image: -ms-linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
-  background-image: linear-gradient(top, #ffffff, #e8e8e8 2%, #ffffff 30%);
-  border: 1px solid #999;
+  border-top: 1px solid #999;
+  border-right: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #ccc;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -287,10 +284,13 @@ textarea {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   color: #444;
   font-size: 1em;
-  line-height: 1.4em;
-  padding: 0.38em 0.38em;
+  padding: 0.5em 0.38em 0.38em;
   width: 100%;
   /* default behavior is extending to full area, overwrite as needed */
   font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", serif;
@@ -303,6 +303,16 @@ textarea:focus {
   -webkit-box-shadow: 0 0 5px #0080ff;
   -o-box-shadow: 0 0 5px #0080ff;
   box-shadow: 0 0 5px #0080ff;
+}
+
+/* line 47, sass/core/_forms.scss */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+/* line 48, sass/core/_forms.scss */
+input:-moz-placeholder {
+  font-style: italic;
 }
 
 /*******************************************************************************
@@ -395,9 +405,9 @@ sup {
 
 /* line 40, sass/core/_typography.scss */
 ul, ol {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  margin-bottom: 1.8em;
+  font-size: 1.7em;
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
   margin-left: 1.5em;
 }
 
@@ -441,7 +451,7 @@ ol li li {
 
 /* line 68, sass/core/_typography.scss */
 p {
-  font-size: 1.6em;
+  font-size: 1.7em;
   line-height: 1.6em;
   margin-bottom: 1.6em;
 }
@@ -1846,9 +1856,10 @@ body.home article h1:after {
   position: relative;
   margin-left: 0;
   margin-bottom: 1.5em;
+  font-size: 1.5em;
 }
 
-/* line 90, sass/components/_comments.scss */
+/* line 91, sass/components/_comments.scss */
 .post-comments .empty:after,
 #commentlist:after {
   background: url(images/sprite.png) no-repeat -24px -424px;
@@ -1862,12 +1873,12 @@ body.home article h1:after {
   height: 24px;
 }
 
-/* line 102, sass/components/_comments.scss */
+/* line 103, sass/components/_comments.scss */
 #commentlist li {
   margin-bottom: 2em;
 }
 
-/* line 104, sass/components/_comments.scss */
+/* line 105, sass/components/_comments.scss */
 #commentlist article {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
@@ -1878,49 +1889,49 @@ body.home article h1:after {
   padding: 0.75em;
 }
 
-/* line 111, sass/components/_comments.scss */
+/* line 112, sass/components/_comments.scss */
 #commentlist footer {
   margin-bottom: 1em;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.75em;
 }
 
-/* line 117, sass/components/_comments.scss */
+/* line 118, sass/components/_comments.scss */
 #commentlist footer figure {
   float: left;
   margin-right: 0.5em;
   line-height: 1px;
 }
 
-/* line 123, sass/components/_comments.scss */
+/* line 124, sass/components/_comments.scss */
 #commentlist footer figure a {
   border: none;
 }
 
-/* line 127, sass/components/_comments.scss */
+/* line 128, sass/components/_comments.scss */
 #commentlist footer .meta {
   float: left;
   margin: 0;
 }
 
-/* line 132, sass/components/_comments.scss */
+/* line 133, sass/components/_comments.scss */
 #commentlist footer time {
   font-size: 0.875em;
 }
 
-/* line 136, sass/components/_comments.scss */
+/* line 137, sass/components/_comments.scss */
 #commentlist footer .reply {
   float: right;
   margin: 0;
   font-size: 0.875em;
 }
 
-/* line 142, sass/components/_comments.scss */
+/* line 143, sass/components/_comments.scss */
 #commentlist article p:last-child {
   margin-bottom: 0;
 }
 
-/* line 146, sass/components/_comments.scss */
+/* line 147, sass/components/_comments.scss */
 #commentlist ol {
   list-style: none;
   list-style-position: outside;
@@ -1928,23 +1939,23 @@ body.home article h1:after {
   margin-left: 4em;
 }
 
-/* line 153, sass/components/_comments.scss */
+/* line 154, sass/components/_comments.scss */
 #commentlist ol li {
   margin-bottom: 1em;
 }
 
-/* line 157, sass/components/_comments.scss */
+/* line 158, sass/components/_comments.scss */
 #commentlist .comment-moderation {
   text-align: center;
   margin-bottom: 0;
 }
 
-/* line 162, sass/components/_comments.scss */
+/* line 163, sass/components/_comments.scss */
 #commentlist .bypostauthor > article {
   background: #e0ecf0;
 }
 
-/* line 166, sass/components/_comments.scss */
+/* line 167, sass/components/_comments.scss */
 #commentlist .bypostauthor > article footer {
   border-bottom: 1px solid #dadada;
 }

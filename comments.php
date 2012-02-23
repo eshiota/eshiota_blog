@@ -25,22 +25,22 @@
       <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" novalidate>
         <p>
           <label for="author"><?php _e('Name (mandatory)', 'eshiota'); ?></label>
-          <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" />
+          <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" placeholder="Tell us who you are" />
         </p>
 
         <p>
-          <label for="email"><?php _e('Email (will not be published)', 'eshiota'); ?></label>
-          <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2"  />
+          <label for="email"><?php _e('Email', 'eshiota'); ?></label>
+          <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" placeholder="Will not be published, promise" />
         </p>
 
         <p>
           <label for="url">Website</label>
-          <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+          <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" placeholder="Starts with http://" />
         </p>
 
         <p>
           <label for="comment"><?php _e('Comment', 'eshiota'); ?></label>
-          <textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+          <textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" placeholder="What's up?"></textarea>
         </p>
 
         <p class="submit">
