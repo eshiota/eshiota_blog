@@ -1,0 +1,40 @@
+/*******************************************************************************
+*
+*  Media Queries » Less than 1000px
+*
+*  These styles will be applied when viewport has less than the
+*  commonly used 960px + 20px horizontal padding
+*
+*******************************************************************************/
+
+@media screen and (max-width: 1000px) {
+
+/*********************************************************
+*  In core/typography
+*********************************************************/
+p,
+ul, ol { font-size: 1.5em; }
+
+h1 { font-size: 4.5em; }
+h2 { font-size: 3.0em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.6em; }
+
+body > section > hgroup > h2,
+body > article > hgroup > h2 { font-size: 1.8em; }
+
+
+/*********************************************************
+*  In components/photoList
+*********************************************************/
+.photo-list li a { border-width: 3px; }
+
+
+/*********************************************************
+*  In layout/home
+*********************************************************/
+body.home article h1 { font-size: 2.4em; }
+
+
+
+} // mediaQuery

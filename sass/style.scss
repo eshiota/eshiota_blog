@@ -51,4 +51,8 @@ Tags: fluid, responsive design, clean, white
 @import "components/photoList";
 @import "components/pagination";
 
-// @import "queries/size";
+@import "queries/lt520";
+@import "queries/lt768";
+@import "queries/lt1000";
+@import "queries/retina";
+@import "queries/wide";

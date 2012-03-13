@@ -81,8 +81,6 @@ body.home > section > header h3:after {
   padding-left: 0.4em;
 }
 
-body.home > section > header p { font-size: 1.7em; }
-
 body.home > section > header strong { color: #b55e5e; }
 
 body.home > section > header .more {
@@ -115,6 +113,7 @@ body.home section section {
   @include box-sizing(border-box);
   margin: 0 auto;
   width: 66.66666%;
+  font-size: 0.95em;
 }
 
 body.home section section article { margin-bottom: 0; }

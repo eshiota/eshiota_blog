@@ -274,19 +274,16 @@ textarea {
   border-right: 1px solid #aaa;
   border-left: 1px solid #aaa;
   border-bottom: 1px solid #ccc;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   color: #444;
   font-size: 1em;
@@ -299,9 +296,8 @@ textarea {
 /* line 43, sass/core/_forms.scss */
 input:focus,
 textarea:focus {
-  -moz-box-shadow: 0 0 5px #0080ff;
   -webkit-box-shadow: 0 0 5px #0080ff;
-  -o-box-shadow: 0 0 5px #0080ff;
+  -moz-box-shadow: 0 0 5px #0080ff;
   box-shadow: 0 0 5px #0080ff;
 }
 
@@ -406,8 +402,8 @@ sup {
 /* line 40, sass/core/_typography.scss */
 ul, ol {
   font-size: 1.7em;
-  line-height: 1.6em;
-  margin-bottom: 1.6em;
+  line-height: 1.7em;
+  margin-bottom: 1.7em;
   margin-left: 1.5em;
 }
 
@@ -452,8 +448,8 @@ ol li li {
 /* line 68, sass/core/_typography.scss */
 p {
   font-size: 1.7em;
-  line-height: 1.6em;
-  margin-bottom: 1.6em;
+  line-height: 1.7em;
+  margin-bottom: 1.7em;
 }
 
 /* line 74, sass/core/_typography.scss */
@@ -617,9 +613,8 @@ h1.main-title:after {
 body > section > h1,
 body > section > hgroup > h1,
 body > article > hgroup > h1 {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto 1em;
   width: 66.66666%;
@@ -776,18 +771,11 @@ body > header nav a:active {
   border-bottom: 1px solid #666;
   color: #666;
   text-decoration: none;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.1s;
-  -webkit-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 /* line 61, sass/layout/_header.scss */
@@ -811,9 +799,8 @@ body > footer {
 
 /* line 15, sass/layout/_footer.scss */
 body > footer aside {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   padding: 0 1.7em;
@@ -946,9 +933,8 @@ body > footer .colophon p:after {
   background: #fff;
   padding: 10px;
   text-shadow: none;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   position: relative;
 }
@@ -964,14 +950,13 @@ body > footer .colophon p:after {
   width: 60%;
   max-width: 300px;
   height: 55%;
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-transform: skew(-15deg) rotate(-6deg);
   -webkit-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
   -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
   transform: skew(-15deg) rotate(-6deg);
 }
 
@@ -979,10 +964,10 @@ body > footer .colophon p:after {
 .wp-caption:after {
   left: auto;
   right: 8%;
-  -moz-transform: skew(15deg) rotate(6deg);
   -webkit-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
   -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
   transform: skew(15deg) rotate(6deg);
 }
 
@@ -1112,29 +1097,24 @@ body.home > section > header h3:after {
 }
 
 /* line 84, sass/layout/_home.scss */
-body.home > section > header p {
-  font-size: 1.7em;
-}
-
-/* line 86, sass/layout/_home.scss */
 body.home > section > header strong {
   color: #b55e5e;
 }
 
-/* line 88, sass/layout/_home.scss */
+/* line 86, sass/layout/_home.scss */
 body.home > section > header .more {
   margin-bottom: 0;
   text-transform: lowercase;
 }
 
-/* line 93, sass/layout/_home.scss */
+/* line 91, sass/layout/_home.scss */
 body.home > section > header .more:before {
   color: #6fa0ae;
   content: "\00AB";
   padding-right: 0.2em;
 }
 
-/* line 99, sass/layout/_home.scss */
+/* line 97, sass/layout/_home.scss */
 body.home > section > header .more:after {
   color: #6fa0ae;
   content: "\00BB";
@@ -1149,22 +1129,22 @@ body.home > section > header .more:after {
   width: 33.33%;
 }*/
 /* While I don't have tutorials or portfolio, this is used */
-/* line 114, sass/layout/_home.scss */
+/* line 112, sass/layout/_home.scss */
 body.home section section {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
   width: 66.66666%;
+  font-size: 0.95em;
 }
 
-/* line 120, sass/layout/_home.scss */
+/* line 119, sass/layout/_home.scss */
 body.home section section article {
   margin-bottom: 0;
 }
 
-/* line 122, sass/layout/_home.scss */
+/* line 121, sass/layout/_home.scss */
 body.home section section h2 {
   font-size: 1.6em;
   margin-bottom: 0.5em;
@@ -1172,34 +1152,34 @@ body.home section section h2 {
   text-transform: lowercase;
 }
 
-/* line 129, sass/layout/_home.scss */
+/* line 128, sass/layout/_home.scss */
 .latest-blogpost {
   padding-right: 1.7em;
 }
 
-/* line 131, sass/layout/_home.scss */
+/* line 130, sass/layout/_home.scss */
 .latest-tutorial {
   padding: 0 1.7em;
 }
 
-/* line 133, sass/layout/_home.scss */
+/* line 132, sass/layout/_home.scss */
 .featured-project {
   padding-left: 1.7em;
 }
 
-/* line 135, sass/layout/_home.scss */
+/* line 134, sass/layout/_home.scss */
 body.home section article {
   margin: 0;
   width: auto;
 }
 
-/* line 140, sass/layout/_home.scss */
+/* line 139, sass/layout/_home.scss */
 body.home article h1 {
   font-size: 3em;
   padding: 0;
 }
 
-/* line 146, sass/layout/_home.scss */
+/* line 145, sass/layout/_home.scss */
 body.home article h1:before,
 body.home article h1:after {
   display: none;
@@ -1224,9 +1204,8 @@ body.home article h1:after {
   line-height: 2.42857em;
   color: #777;
   position: relative;
-  -moz-box-shadow: 0 1px 0 white;
   -webkit-box-shadow: 0 1px 0 white;
-  -o-box-shadow: 0 1px 0 white;
+  -moz-box-shadow: 0 1px 0 white;
   box-shadow: 0 1px 0 white;
 }
 
@@ -1376,9 +1355,8 @@ body.home article h1:after {
 *********************************************************************/
 /* line 152, sass/components/_postSingle.scss */
 #project-gallery {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
   height: 200px;
@@ -1387,9 +1365,8 @@ body.home article h1:after {
   margin-right: 3.125%;
   margin-bottom: 3em;
   float: left;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   position: relative;
   background: #fff;
@@ -1406,14 +1383,13 @@ body.home article h1:after {
   width: 80%;
   max-width: 300px;
   height: 55%;
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-transform: skew(-15deg) rotate(-6deg);
   -webkit-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
   -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
   transform: skew(-15deg) rotate(-6deg);
 }
 
@@ -1421,10 +1397,10 @@ body.home article h1:after {
 #project-gallery:after {
   left: auto;
   right: 5%;
-  -moz-transform: skew(15deg) rotate(6deg);
   -webkit-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
   -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
   transform: skew(15deg) rotate(6deg);
 }
 
@@ -1444,18 +1420,11 @@ body.home article h1:after {
   width: 100%;
   max-width: 100%;
   opacity: 0;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
   position: absolute;
   top: 0;
   left: 0;
@@ -1470,27 +1439,19 @@ body.home article h1:after {
 
 /* line 211, sass/components/_postSingle.scss */
 #project-gallery p {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 101;
   opacity: 0;
-  -moz-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
   background: rgba(0, 0, 0, 0.8);
   margin-bottom: 0;
   padding: 0.5em 0.8em;
@@ -1665,9 +1626,8 @@ body.home article h1:after {
 
 /* line 11, sass/components/_portfolioList.scss */
 #portfolio-list article {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   margin-bottom: 3em;
@@ -1696,14 +1656,12 @@ body.home article h1:after {
 /* line 30, sass/components/_portfolioList.scss */
 #portfolio-list figure {
   text-align: center;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2%;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   position: relative;
   background: #fff;
@@ -1720,14 +1678,13 @@ body.home article h1:after {
   width: 80%;
   max-width: 300px;
   height: 55%;
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-transform: skew(-15deg) rotate(-6deg);
   -webkit-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
   -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
   transform: skew(-15deg) rotate(-6deg);
 }
 
@@ -1735,10 +1692,10 @@ body.home article h1:after {
 #portfolio-list figure:after {
   left: auto;
   right: 5%;
-  -moz-transform: skew(15deg) rotate(6deg);
   -webkit-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
   -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
   transform: skew(15deg) rotate(6deg);
 }
 
@@ -1880,9 +1837,8 @@ body.home article h1:after {
 
 /* line 105, sass/components/_comments.scss */
 #commentlist article {
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   margin-bottom: 0;
   background: #fff;
@@ -1995,9 +1951,8 @@ body.home article h1:after {
 
 /* line 21, sass/components/_photoList.scss */
 .photo-list li {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
   padding: 0.4em 0.5em;
@@ -2007,30 +1962,21 @@ body.home article h1:after {
 /* line 28, sass/components/_photoList.scss */
 .photo-list li a {
   background: #ececec;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   border: 5px solid #ececec;
   display: block;
   position: relative;
   width: 100%;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.1s;
-  -webkit-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
-  -moz-transition-timing-function: ease-in;
-  -webkit-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 /* line 39, sass/components/_photoList.scss */
@@ -2049,14 +1995,13 @@ body.home article h1:after {
   width: 52%;
   max-width: 70px;
   height: 55%;
-  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  -moz-transform: skew(-15deg) rotate(-6deg);
   -webkit-transform: skew(-15deg) rotate(-6deg);
-  -o-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
   -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
   transform: skew(-15deg) rotate(-6deg);
 }
 
@@ -2064,10 +2009,10 @@ body.home article h1:after {
 .photo-list li a:after {
   left: auto;
   right: 3px;
-  -moz-transform: skew(15deg) rotate(6deg);
   -webkit-transform: skew(15deg) rotate(6deg);
-  -o-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
   -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
   transform: skew(15deg) rotate(6deg);
 }
 
@@ -2106,15 +2051,13 @@ body.home article h1:after {
 .wp-pagenavi .current {
   background: rgba(100, 100, 100, 0.05);
   border: 1px solid #666;
-  -moz-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
   -webkit-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-  -o-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+  -moz-box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
   box-shadow: 0 1px 0 white, 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   margin: 0 0.4em;
   padding: 0.4em;
@@ -2143,3 +2086,94 @@ body.home article h1:after {
 .wp-pagenavi .extend {
   margin: 0 0.4em;
 }
+
+/*******************************************************************************
+*
+*  Media Queries » Less than 520px
+*
+*  These styles will be applied to portable devices with small screens
+*  (e.g. smartphones)
+*
+*******************************************************************************/
+/*******************************************************************************
+*
+*  Media Queries » Less than 768px
+*
+*  These styles will be applied to portable devices with large screens
+*  (e.g. portrait tablets, netbooks)
+*
+*******************************************************************************/
+/*******************************************************************************
+*
+*  Media Queries » Less than 1000px
+*
+*  These styles will be applied when viewport has less than the
+*  commonly used 960px + 20px horizontal padding
+*
+*******************************************************************************/
+@media screen and (max-width: 1000px) {
+  /*********************************************************
+  *  In core/typography
+  *********************************************************/
+  /* line 16, sass/queries/_lt1000.scss */
+  p,
+  ul, ol {
+    font-size: 1.5em;
+  }
+
+  /* line 18, sass/queries/_lt1000.scss */
+  h1 {
+    font-size: 4.5em;
+  }
+
+  /* line 19, sass/queries/_lt1000.scss */
+  h2 {
+    font-size: 3.0em;
+  }
+
+  /* line 20, sass/queries/_lt1000.scss */
+  h3 {
+    font-size: 2.2em;
+  }
+
+  /* line 21, sass/queries/_lt1000.scss */
+  h4 {
+    font-size: 1.6em;
+  }
+
+  /* line 24, sass/queries/_lt1000.scss */
+  body > section > hgroup > h2,
+  body > article > hgroup > h2 {
+    font-size: 1.8em;
+  }
+
+  /*********************************************************
+  *  In components/photoList
+  *********************************************************/
+  /* line 30, sass/queries/_lt1000.scss */
+  .photo-list li a {
+    border-width: 3px;
+  }
+
+  /*********************************************************
+  *  In layout/home
+  *********************************************************/
+  /* line 36, sass/queries/_lt1000.scss */
+  body.home article h1 {
+    font-size: 2.4em;
+  }
+}
+/*******************************************************************************
+*
+*  Media Queries » Retina Display
+*
+*  Query for high-density displays (2x pixel ratio)
+*
+*******************************************************************************/
+/*******************************************************************************
+*
+*  Media Queries » Wide (more than 1200px)
+*
+*  These styles will be applied to widescreen-like viewports.
+*
+*******************************************************************************/
